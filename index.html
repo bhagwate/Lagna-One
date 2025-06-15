@@ -27,6 +27,7 @@
       display: flex;
       justify-content: center;
       gap: 1rem;
+      flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
     }
     .tab-btn {
       padding: 0.75rem 1.5rem;
@@ -93,6 +94,106 @@
       padding: 1rem;
       color: #777;
     }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+    
+    .mySlides img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      background-color: rgba(0,0,0,0.3);
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+      background-color: rgba(0,0,0,0.5);
+      border-radius: 0 0 10px 10px;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+      background-color: rgba(0,0,0,0.5);
+      border-radius: 10px 0 0 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot-container {
+        text-align: center;
+        padding-top: 10px;
+    }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active-dot, .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
   </style>
 </head>
 <body>
@@ -104,6 +205,7 @@
   <div class="tabs">
     <button class="tab-btn active" onclick="openTab('introduction')">Introduction</button>
     <button class="tab-btn" onclick="openTab('download')">Download</button>
+    <button class="tab-btn" onclick="openTab('screenshots')">Screenshots</button>
     <button class="tab-btn" onclick="openTab('about')">About Author</button>
   </div>
 
@@ -175,13 +277,94 @@
         <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-PreRelease1.0.0/LagnaOne-1.0.0.AppImage" class="btn">Download for Linux (.AppImage)</a>
       </div>
     </div>
+    
+    <div id="screenshots" class="tab-content">
+      <div class="description">
+        <h2 style="text-align: center;">LagnaOne Screenshots</h2>
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 11</div>
+            <img src="Screenshot1.png" alt="LagnaOne Screenshot 1">
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 11</div>
+            <img src="Screenshot2.png" alt="LagnaOne Screenshot 2">
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 11</div>
+            <img src="Screenshot3.png" alt="LagnaOne Screenshot 3">
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 11</div>
+            <img src="Screenshot4.png" alt="LagnaOne Screenshot 4">
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 11</div>
+            <img src="Screenshot5.png" alt="LagnaOne Screenshot 5">
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">6 / 11</div>
+            <img src="Screenshot6.png" alt="LagnaOne Screenshot 6">
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">7 / 11</div>
+            <img src="Screenshot7.png" alt="LagnaOne Screenshot 7">
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">8 / 11</div>
+            <img src="Screenshot8.png" alt="LagnaOne Screenshot 8">
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">9 / 11</div>
+            <img src="Screenshot9.png" alt="LagnaOne Screenshot 9">
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">10 / 11</div>
+            <img src="Screenshot10.png" alt="LagnaOne Screenshot 10">
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">11 / 11</div>
+            <img src="Screenshot11.png" alt="LagnaOne Screenshot 11">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+          <span class="dot" onclick="currentSlide(7)"></span>
+          <span class="dot" onclick="currentSlide(8)"></span>
+          <span class="dot" onclick="currentSlide(9)"></span>
+          <span class="dot" onclick="currentSlide(10)"></span>
+          <span class="dot" onclick="currentSlide(11)"></span>
+        </div>
+      </div>
+    </div>
 
     <div id="about" class="tab-content">
       <div class="description">
         <h2>About the Author</h2>
         <p>Partho Banerjee is a Jyotishi or Vedic astrologer as popularly called these days, as well as passionate applications software expert dedicated to making Jyotish tools accessible to all.</p>
         <p>This Astrology software is created, owned, managed and maintained by Partho Banerjee, that’s me. LagnaOne is designed to grow for and with the Jyotish community.</p>
-<div style="text-align: center;"><img src="LagnaOne-Author-Partho-Banerjee.jpg" width=300 alt="LagnaOne Astrologer Partho Banerjee" style="border-radius:50%;"></div>
+        <div style="text-align: center;"><img src="LagnaOne-Author-Partho-Banerjee.jpg" width=300 alt="LagnaOne Astrologer Partho Banerjee" style="border-radius:50%;"></div>
         <p>I have been a full time IT and software professional for 14 years and have done Master's in Computer Applications. I am certified corporate IT trainer by Indian Institute of Technology (IIT) Kanpur, India and IBM Corporation. I have worked with leading IT companies in banking and financial services domain at global cities including London, Singapore, Mumbai, Copenhagen, Hong Kong etc.</p>
         <p>My journey in Jyotish or Vedic astrology as popularly called, numerology and spiritual science began in the year 1999 and I started horoscope analysis in the year 2001. All through that decade, I was pursuing my full time job in the IT along-side astrology as well in parallel.</p>
         <p>In my eventful journey of more than a decade and half as practicing astrologer, I have done consultations for people from different walks of life across various cultures and countries (thanks to the internet).</p>
@@ -198,6 +381,8 @@
   </footer>
 
   <script>
+    let slideIndex = 1;
+
     function openTab(tabName) {
       // Hide all tab content
       document.querySelectorAll('.tab-content').forEach(tab => {
@@ -210,6 +395,43 @@
       // Show selected tab content and mark button as active
       document.getElementById(tabName).classList.add('active');
       document.querySelector(`button[onclick="openTab('${tabName}')"]`).classList.add('active');
+      
+      // If the screenshots tab is opened, show the first slide
+      if (tabName === 'screenshots') {
+          showSlides(slideIndex);
+      }
+    }
+    
+    // Initialize the first tab
+    document.addEventListener("DOMContentLoaded", function() {
+        openTab('introduction');
+    });
+
+    // Slideshow functions
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active-dot", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active-dot";
     }
   </script>
 </body>
