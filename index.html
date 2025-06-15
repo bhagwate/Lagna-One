@@ -19,6 +19,27 @@
     }
     h1 {
       margin: 0.2em 0;
+      font-size: 2rem;
+    }
+    .tabs {
+      max-width: 800px;
+      margin: 1rem auto;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .tab-btn {
+      padding: 0.75rem 1.5rem;
+      background-color: #835D80;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .tab-btn:hover, .tab-btn.active {
+      background-color: #6a0dad;
     }
     .container {
       max-width: 800px;
@@ -28,9 +49,25 @@
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
     .description {
       font-size: 1.1rem;
       line-height: 1.6;
+    }
+    .description h2 {
+      color: #835D80;
+      margin-top: 1.5rem;
+    }
+    .description ul {
+      padding-left: 1.5rem;
+    }
+    .description li {
+      margin-bottom: 0.5rem;
     }
     .download-section {
       margin-top: 2rem;
@@ -59,29 +96,113 @@
   </style>
 </head>
 <body>
+  <header>
+    <h1>LagnaOne</h1>
+    <p>Cross-platform Offline Vedic Astrology Desktop App</p>
+  </header>
 
-<header>
-  <h1>LagnaOne</h1>
-  <p>Cross-platform Offline Vedic Astrology Desktop App</p>
-</header>
-
-<div class="container">
-  <div class="description">
-    <p><strong>LagnaOne</strong> is a fast, offline, and free Vedic astrology software for Windows, macOS, and Linux. It includes Panchanga, Vimshottari Dasha (with nested levels), Divisional Charts (D1–D60), and North/South Indian styles.</p>
-
-    <p>Download the latest version for your platform below. No signup required.</p>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="openTab('introduction')">Introduction</button>
+    <button class="tab-btn" onclick="openTab('download')">Download</button>
+    <button class="tab-btn" onclick="openTab('about')">About Author</button>
   </div>
 
-  <div class="download-section">
-    <a href="https://github.com/yourname/LagnaOne/releases/download/v1.0.0/LagnaOne.exe" class="btn">Download for Windows (.exe)</a>
-    <a href="https://github.com/yourname/LagnaOne/releases/download/v1.0.0/LagnaOne.dmg" class="btn">Download for macOS (.dmg)</a>
-    <a href="https://github.com/yourname/LagnaOne/releases/download/v1.0.0/LagnaOne.AppImage" class="btn">Download for Linux (.AppImage)</a>
+  <div class="container">
+    <div id="introduction" class="tab-content active">
+      <div class="description">
+        <h2>Introduction to Your Free, Offline Vedic Astrology Software</h2>
+        <p>Welcome to a groundbreaking tool designed for Jyotish students, enthusiasts, and professionals—a <strong>100% offline Vedic astrology software</strong> that’s completely free, ad-free, and will remain so forever. Crafted with passion and precision, this cross-platform application brings the ancient wisdom of Vedic astrology to your fingertips, offering unparalleled flexibility, modern design, and cost-effective accessibility without requiring an internet connection.</p>
+
+        <h3>Key Features and Benefits</h3>
+        <h4>1. Complete Offline Functionality</h4>
+        <ul>
+          <li>No internet? No problem! This software operates entirely offline, ensuring you can perform astrological calculations, generate charts, and analyze planetary positions anytime, anywhere—whether you're in a remote village, traveling, or simply prefer a disconnected experience.</li>
+          <li>Ideal for uninterrupted focus during consultations, study sessions, or research, free from network dependencies or data privacy concerns.</li>
+        </ul>
+        <h4>2. Modern, Intuitive User Interface</h4>
+        <ul>
+          <li>Say goodbye to clunky, outdated designs. The software features a sleek, user-friendly interface that blends modern aesthetics with the timeless essence of Vedic astrology.</li>
+          <li>Easy navigation, customizable themes, and responsive layouts make it a joy to use on desktops, laptops, tablets, or even low-spec devices, ensuring accessibility for all.</li>
+        </ul>
+        <h4>3. Comprehensive Astrological Tools</h4>
+        <ul>
+          <li>Generate precise <strong>natal charts</strong>, <strong>divisional charts</strong> (up to D-60), <strong>dashas</strong> (Vimshottari, Ashtottari, and more), and <strong>transit charts</strong> with pinpoint accuracy based on authentic Vedic algorithms.</li>
+          <li>Explore detailed <strong>planetary positions</strong>, <strong>aspects</strong>, <strong>yogas</strong>, and <strong>panchang</strong> calculations to deepen your astrological insights.</li>
+          <li>Built-in <strong>interpretation guides</strong> and reference tables assist beginners while offering advanced tools like <strong>Muhurta</strong> selection and <strong>remedial measures</strong> for seasoned practitioners.</li>
+        </ul>
+        <h4>4. Flexible for All Users</h4>
+        <ul>
+          <li><strong>Students</strong>: Learn Vedic astrology with integrated tutorials, example charts, and a glossary of Jyotish terms, making complex concepts approachable.</li>
+          <li><strong>Enthusiasts</strong>: Experiment with charts, explore planetary influences, and save unlimited profiles for friends and family.</li>
+          <li><strong>Professionals</strong>: Streamline consultations with batch chart generation, printable reports, and tools tailored for daily practice, all while maintaining client data securely offline.</li>
+        </ul>
+        <h4>5. Forever Free, No Strings Attached</h4>
+        <ul>
+          <li>This software is a labor of love, offered completely free with <strong>no ads</strong>, <strong>no in-app purchases</strong>, and <strong>no premium versions</strong>—now or ever.</li>
+          <li>Save on costly subscriptions or proprietary tools while enjoying professional-grade features, making Vedic astrology accessible to everyone, regardless of financial means.</li>
+        </ul>
+        <h4>6. Cross-Platform Compatibility</h4>
+        <ul>
+          <li>Available for <strong>Windows</strong>, <strong>macOS</strong>, <strong>Linux</strong>, and select <strong>mobile platforms</strong>, ensuring you can use it on your preferred device.</li>
+          <li>Lightweight and optimized, it runs smoothly even on older hardware, democratizing access to high-quality astrological tools.</li>
+        </ul>
+        <h4>7. Easy to Download and Install</h4>
+        <ul>
+          <li>Get started in minutes with a hassle-free download from the official website and a simple installation process.</li>
+          <li>Regular updates (also offline-installable) ensure you always have the latest features and bug fixes without compromising the offline experience.</li>
+        </ul>
+        <h4>8. Secure and Private</h4>
+        <ul>
+          <li>With all data stored locally on your device, your charts, client details, and personal notes remain completely private—no cloud servers, no tracking, no worries.</li>
+          <li>Perfect for professionals who prioritize confidentiality and users who value data sovereignty.</li>
+        </ul>
+        <h3>Why This Software Stands Out</h3>
+        <p>This Vedic astrology software isn’t just a tool—it’s a bridge between tradition and technology. Whether you’re casting your first chart or conducting advanced research, its blend of <strong>precision</strong>, <strong>accessibility</strong>, and <strong>modern design</strong> empowers you to explore the cosmos with confidence. By being forever free and fully offline, it removes barriers, making the profound wisdom of Jyotish available to all.</p>
+        <h3>Get Started Today</h3>
+        <p>Download this transformative software today and embark on your astrological journey with ease, clarity, and freedom. Whether you’re a curious beginner or a seasoned astrologer, this tool is designed to grow with you, supporting your practice every step of the way.</p>
+        <p><em>Let the stars guide you, offline and free, forever.</em></p>
+      </div>
+    </div>
+
+    <div id="download" class="tab-content">
+      <div class="description">
+        <p><strong>LagnaOne</strong> is a fast, offline, and free Vedic astrology software for Windows, macOS, and Linux. It includes Panchanga, Vimshottari Dasha (with nested levels), Divisional Charts (D1–D60), and North/South Indian styles.</p>
+        <p>Download the latest version for your platform below. No signup required.</p>
+      </div>
+      <div class="download-section">
+        <a href="https://github.com/yourname/LagnaOne/releases/download/v1.0.0/LagnaOne.exe" class="btn">Download for Windows (.exe)</a>
+        <a href="https://github.com/yourname/LagnaOne/releases/download/v1.0.0/LagnaOne.dmg" class="btn">Download for macOS (.dmg)</a>
+        <a href="https://github.com/yourname/LagnaOne/releases/download/v1.0.0/LagnaOne.AppImage" class="btn">Download for Linux (.AppImage)</a>
+      </div>
+    </div>
+
+    <div id="about" class="tab-content">
+      <div class="description">
+        <h2>About the Author</h2>
+        <p>Partho Banerjee is a passionate developer and Vedic astrology enthusiast dedicated to making Jyotish accessible to all.</p>
+        <p>This section will be updated with more details about the author's journey and contributions to the field of astrology.</p>
+      </div>
+    </div>
   </div>
-</div>
 
-<footer>
-  © 2025 LagnaOne by Partho Banerjee. All rights reserved.
-</footer>
+  <footer>
+    © 2025 LagnaOne by Partho Banerjee. All rights reserved.
+  </footer>
 
+  <script>
+    function openTab(tabName) {
+      // Hide all tab content
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      // Remove active class from all buttons
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      // Show selected tab content and mark button as active
+      document.getElementById(tabName).classList.add('active');
+      document.querySelector(`button[onclick="openTab('${tabName}')"]`).classList.add('active');
+    }
+  </script>
 </body>
 </html>
