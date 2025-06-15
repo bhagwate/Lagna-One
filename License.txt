@@ -1,0 +1,24 @@
+LagnaOne Freeware License Agreement
+
+Copyright © Partho Banerjee, 2025
+
+This software, LagnaOne, is provided as freeware for personal, non-commercial use only. By installing or using this software, you agree to the following terms:
+
+1. License Grant:
+You are granted a non-exclusive, non-transferable license to use LagnaOne on one or more personal computers.
+
+2. Restrictions:
+You may not reverse engineer, decompile, or disassemble the software.
+You may not modify or create derivative works of the software.
+You may not redistribute the software without prior written permission from the author.
+Commercial use of the software is prohibited without express written permission from the author of this software.
+
+3. Ownership:
+The software is licensed, not sold. All rights, title, and interest in the software remain with the copyright holder.
+
+4. Disclaimer of Warranty:
+This software is provided "as is", without warranty of any kind. The entire risk as to the quality and performance of the software is with you.
+
+5. Limitation of Liability:
+In no event shall the author be liable for any damages arising out of the use or inability to use the software, even if the author has been advised of the possibility of such damages, if any.
+
