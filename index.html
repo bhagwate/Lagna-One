@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LagnaOne – Jyotish (Vedic Astrology) App</title>
+  <title>LagnaOne – Vedic Astrology App</title>
   <style>
     body {
       margin: 0;
@@ -194,34 +194,18 @@
       from {opacity: .4}
       to {opacity: 1}
     }
-    
-    /* License Text Area */
-    #license-text {
-        width: 95%;
-        height: 400px;
-        padding: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        font-family: monospace, sans-serif;
-        white-space: pre-wrap;
-        overflow-y: scroll;
-        background-color: #fff;
-        color: #333;
-        resize: none;
-    }
   </style>
 </head>
 <body>
   <header>
     <h1>LagnaOne</h1>
-    <p>Jyotish (Vedic Astrology) App for Mac, PC, Linux - Free forever</p>
+    <p>Cross-platform Offline Vedic Astrology Desktop App</p>
   </header>
 
   <div class="tabs">
     <button class="tab-btn active" onclick="openTab('introduction')">Introduction</button>
     <button class="tab-btn" onclick="openTab('download')">Download</button>
     <button class="tab-btn" onclick="openTab('screenshots')">Screenshots</button>
-    <button class="tab-btn" onclick="openTab('license')">License</button>
     <button class="tab-btn" onclick="openTab('about')">About Author</button>
   </div>
 
@@ -261,7 +245,7 @@
         </ul>
         <h4>6. Cross-Platform Compatibility</h4>
         <ul>
-          <li>Available for all desktop/laptop platforms - <strong>Windows</strong>, <strong>macOS</strong> and <strong>Linux</strong>, operating systems, it has been ensured that everyone is able to use it on preferred device. Hardly any desktop/laptop that was released in last 10 - 15 years has been left out.</li>
+          <li>Available for <strong>Windows</strong>, <strong>macOS</strong>, <strong>Linux</strong>, and select <strong>mobile platforms</strong>, ensuring you can use it on your preferred device.</li>
           <li>Lightweight and optimized, it runs smoothly even on older hardware, democratizing access to high-quality astrological tools.</li>
         </ul>
         <h4>7. Easy to Download and Install</h4>
@@ -288,9 +272,9 @@
         <p>Download the software version for your platform below. No signup required.</p>
       </div>
       <div class="download-section">
-        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-PreRelease1.0.0/LagnaOne.Setup.1.0.0.exe" class="btn">Download for Windows (.exe)</a>
-        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-PreRelease1.0.0/LagnaOne-1.0.0-arm64.dmg" class="btn">Download for macOS (.dmg)</a>
-        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-PreRelease1.0.0/LagnaOne-1.0.0.AppImage" class="btn">Download for Linux (.AppImage)</a>
+        <a href="#" class="btn">Download for Windows (.exe)</a>
+        <a href="#" class="btn">Download for macOS (.dmg)</a>
+        <a href="#" class="btn">Download for Linux (.AppImage)</a>
       </div>
     </div>
     
@@ -374,13 +358,6 @@
         </div>
       </div>
     </div>
-    
-    <div id="license" class="tab-content">
-      <div class="description">
-        <h2 style="text-align: center;">Software License</h2>
-        <textarea id="license-text" readonly>Loading license...</textarea>
-      </div>
-    </div>
 
     <div id="about" class="tab-content">
       <div class="description">
@@ -425,25 +402,9 @@
       }
     }
     
-    // Initialize the first tab and fetch license
+    // Initialize the first tab
     document.addEventListener("DOMContentLoaded", function() {
         openTab('introduction');
-        
-        // Fetch and load the license text
-        fetch('License.txt')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok. Status: ' + response.statusText);
-                }
-                return response.text();
-            })
-            .then(text => {
-                document.getElementById('license-text').value = text;
-            })
-            .catch(error => {
-                console.error('Error fetching license file:', error);
-                document.getElementById('license-text').value = 'Could not load the license file. Please ensure a file named "License.txt" is present in the same directory as this HTML file.';
-            });
     });
 
     // Slideshow functions
@@ -461,7 +422,6 @@
       let i;
       let slides = document.getElementsByClassName("mySlides");
       let dots = document.getElementsByClassName("dot");
-      if (slides.length === 0) return; // Do nothing if no slides
       if (n > slides.length) {slideIndex = 1}
       if (n < 1) {slideIndex = slides.length}
       for (i = 0; i < slides.length; i++) {
