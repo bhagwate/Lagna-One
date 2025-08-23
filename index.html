@@ -216,12 +216,41 @@
       justify-content: center;
       align-items: center;      
     }
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center; /* keeps logo + text centered */
+      gap: 15px;
+      text-align: left; /* avoids double-centering inside */
+    }
+    .logo {
+      width: 85px;
+      height: 55px;
+      border-radius: 12px;   /* or 50% for circle */
+      object-fit: contain;   /* ensures full image fits */
+      background-color: white; /* optional: fills any empty space */
+      padding: 0px;           /* optional: neat spacing inside */
+      flex-shrink: 0;
+    }
+    .title-text h1 {
+      margin: 0;
+    }
+
+    .title-text p {
+      margin: 0;
+      font-size: 1rem;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>LagnaOne</h1>
-    <p>Jyotish (Vedic Astrology) App for Windows, Linux, Mac - Free forever</p>
+    <div class="header-container">
+      <img src="logo_lagna_one_smaller.jpg" alt="LagnaOne Logo" class="logo">
+      <div class="title-text">
+        <h1>LagnaOne</h1>
+        <p>Jyotish (Vedic Astrology) App for Windows, Linux, Mac - Free forever</p>
+      </div>
+    </div>
   </header>
 
   <div class="tabs">
