@@ -85,6 +85,8 @@
       border-radius: 8px;
       font-size: 1rem;
       transition: background 0.3s ease;
+      border: none; /* For button elements */
+      cursor: pointer; /* For button elements */
     }
     .btn:hover {
       background-color: #6a0dad;
@@ -241,6 +243,106 @@
       margin: 0;
       font-size: 1rem;
     }
+    
+    /* NEW STYLES FOR INSTRUCTIONS MODAL */
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+      animation: fadeIn 0.3s;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0}
+        to {opacity: 1}
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 25px 30px;
+      border: 1px solid #888;
+      width: 90%;
+      max-width: 750px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      position: relative;
+      animation: slideIn 0.4s;
+    }
+    
+    @keyframes slideIn {
+        from {top: -100px; opacity: 0}
+        to {top: 0; opacity: 1}
+    }
+
+    .close-btn {
+      color: #aaa;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close-btn:hover,
+    .close-btn:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .instructions-text {
+        text-align: left;
+        margin-top: 1.5rem;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        max-height: 60vh;
+        overflow-y: auto;
+        padding-right: 15px;
+    }
+
+    .instructions-text h3 {
+        color: #835D80;
+        margin-top: 1.2rem;
+        margin-bottom: 0.5rem;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+    }
+    
+    .instructions-text p {
+        margin-bottom: 1rem;
+    }
+
+    .instructions-text code {
+        background-color: #e9e9e9;
+        padding: 3px 8px;
+        border-radius: 5px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.9rem;
+        color: #333;
+        display: block;
+        margin: 0.5rem 0;
+        white-space: pre-wrap;
+        word-break: break-all;
+    }
+    
+    .modal-content h2 {
+        text-align: center;
+        color: #835D80;
+        margin-top: 0;
+    }
+    
+    .modal-download-section {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
   </style>
 </head>
 <body>
@@ -342,8 +444,8 @@
       </div>
       <div class="download-section">
         <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.1.0/LagnaOne.Setup.2.1.1.exe" class="btn">Download for Windows (.exe)</a>
-        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.1.0/LagnaOne-2.1.1-arm64.dmg" class="btn">Download for macOS (.dmg)</a>
-        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.1.0/LagnaOne-2.1.1.AppImage" class="btn">Download for Linux (.AppImage)</a>
+        <button class="btn" onclick="showInstructions('mac')">Download for macOS (.dmg)</button>
+        <button class="btn" onclick="showInstructions('linux')">Download for Linux (.AppImage)</button>
       </div>
       <p><span style="color: green">Download links are live. Version 2.1.1 has been released with major enhancements.</span> For important announcements, join LagnaOne's <a href="https://t.me/LagnaOne">Telegram channel</a>.</p>
       <p><span style="line-height:2.0; font-size: 18px;"><strong>Known issues and shortcomings:</strong></span>
@@ -351,7 +453,8 @@
           <li>Due to restrictions imposed in Mac (macOS), profile changes and preferences are not working as they require some environment related changes at user's end. Other usual things - calculations, charts, dashas, etc. work as expected. Restriction in macOS for 3rd party apps is well known behaviour which can be resolved by user environment changes - most often user permissions and other simple settings explained in many well known Youtube videos on this topic.</li>
           <li>Pdf export link in Chart -> Export is not working currently. This will be fixed in future release.</li>          
           <li>At this stage LagnaOne provides 7 most widely used/popular dasha systems. This will continue to grow in subsequent versions.</li>          
-          <li><strong>Any changes in user profile or preferences related to display or calculations are applied in next session or a new window load. Select Chart -> New from main-menu and the new session starts. This will apply the changes e.g. chart style (north/south/east), colour theme, ayanamsa, etc.</strong></li>  
+          <li><strong>Any changes in user profile or preferences related to display or calculations are applied in next session or a new window load. Select Chart -> New from main-menu and the new session starts. This will apply the changes e.g. chart style (north/south/east), colour theme, ayanamsa, etc.</strong></li>
+          <li>For running on Linux, ensure that you have FUSE library installed (libfuse2 or libfuse3 depending on Linux flavour/version).</li>
           <li>Help topics will be expanded in every new version. The Astrology articles in Help section have been curated from author's website in automated fashion using browser extension. They are all opened offline in the application and do not need internet connection to read inside the application. The articles themselves contain the links  as they are present in the source website - this is automatically done by the browser extensions that curated the articles in pdf.</li></span></p>
       <p>LagnaOne has many new features of birth details based customised predictions for dasha, transits and nakshatra years, numerology turning points, pinnacle years, etc. which <span style="color: red;">should be used strictly for analysis and study purpose only</span>.</p>      
       <p>For announcements of new version release and features of LagnaOne, join it's Telegram channel:<br><a href="https://t.me/LagnaOne">https://t.me/LagnaOne</a></p>
@@ -486,6 +589,63 @@
     © 2025 LagnaOne by Partho Banerjee. All rights reserved.
   </footer>
 
+  <!-- MODALS FOR DOWNLOAD INSTRUCTIONS -->
+  <div id="macModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="hideInstructions('mac')">&times;</span>
+      <h2>Instructions for Mac Users</h2>
+      <div class="modal-download-section">
+        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.1.0/LagnaOne-2.1.1-arm64.dmg" class="btn">CLICK HERE TO DOWNLOAD .DMG</a>
+      </div>
+      <div class="instructions-text">
+        <p><strong>Instructions to Mac users after downloading (copy/paste and save):</strong></p>
+        <p><strong>Step 1.</strong> In the Downloads folder (where it is downloaded from LagnaOne's official website https://AstroLagnaOne.online), double click the downloaded LagnaOne filename with .dmg extension. It starts the install.</p>
+        <p><strong>Step 2.</strong> Drag/move the app file to the Applications folder, then eject the disk image in the Finder by right-click and selecting Eject.</p>
+        <p><strong>Step 3.</strong> Open Terminal (found in Applications > Utilities). Run the below command (copy/paste):</p>
+        <code>xattr -cr /Applications/LagnaOne.app</code>
+        <p><strong>Step 4:</strong> In the Terminal, run the below command (copy/paste):</p>
+        <code>chmod +x /Applications/LagnaOne.app/Contents/Resources/backend/LagnaOneBackend</code>
+        <p><em>Please confirm the LagnaOne.app filename in your Applications folder and correct the filename if required. It should be exactly as it shows in your Applications folder.</em></p>
+        <p><strong>Step 5.</strong> Close Terminal and launch the app again. It should run. You can copy it to the Dock if you wish.</p>
+        <p>If you don't perform steps 1 to 5, you will get error "LagnaOne is damaged and can't be opened. You should move it to trash" which is a common issue for any 3rd party executable binary app - mostly free or un-notarised applications in Mac.</p>
+        
+        <h3>Trouble-shooting for errors in Mac:</h3>
+        <p>If there's any further issues like "Unexpected end of JSON input" or "LagnaOneBackend cannot be opened":</p>
+        <p><strong>A)</strong> Go to System Settings → Privacy & Security, scroll down a bit then → General (or "Allow applications from" in later Mac updates) and click "Allow from Anywhere" when it shows security warning. Then run LagnaOne. <br><em>Note: In later Mac updates, select "Select anywhere" from the drop-down.</em></p>
+        <p><strong>B)</strong> After doing A, if it still gives the error, then Right-click on LagnaOne in Applications folder, select "Open," and confirm any security prompts. Then run LagnaOne.</p>
+        <p><strong>C)</strong> As a last resort, temporarily disable Gatekeeper. Please be warned that it reduces security access to your file system. To do that open the terminal by Applications > Utilities then execute the following command (copy/paste):</p>
+        <code>sudo spctl --master-disable</code>
+        <p>The above command temporary reduces security access to your file system so re-enable it later with following command (copy/paste):</p>
+        <code>sudo spctl --master-enable</code>
+      </div>
+    </div>
+  </div>
+
+  <div id="linuxModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="hideInstructions('linux')">&times;</span>
+      <h2>Instructions for Linux Users (copy/paste and save)</h2>
+       <div class="modal-download-section">
+        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.1.0/LagnaOne-2.1.1.AppImage" class="btn">CLICK HERE TO DOWNLOAD .AppImage</a>
+      </div>
+      <div class="instructions-text">
+        <p>Please ensure you have Fuse installed. Linux system requirements for LagnaOne: The FUSE package (libfuse2 or libfuse3) must be installed, because AppImage needs it to mount itself when run.</p>
+        <h3>For most Debian based systems like Ubuntu, Mint, Zorin etc.:</h3>
+        <code>sudo apt update
+sudo apt install libfuse2
+chmod +x LagnaOne.AppImage</code>
+        <p>Then run LagnaOne on prompt as:</p>
+        <code>./LagnaOne.AppImage</code>
+        <h3>For most Fedora based systems:</h3>
+        <code>sudo dnf install fuse fuse-devel</code>
+        <h3>For RedHat Linux:</h3>
+        <code>sudo dnf install libfuse</code>
+        <p>(in older systems: <code>sudo yum update</code> then <code>sudo yum install fuse fuse-libs</code>)</p>
+      </div>
+    </div>
+  </div>
+
+
   <script>
     let slideIndex = 1;
 
@@ -556,6 +716,29 @@
       slides[slideIndex-1].style.display = "block";
       dots[slideIndex-1].className += " active-dot";
     }
+
+    // NEW FUNCTIONS FOR INSTRUCTIONS MODAL
+    function showInstructions(os) {
+      const modal = document.getElementById(os + 'Modal');
+      if (modal) {
+        modal.style.display = 'block';
+      }
+    }
+
+    function hideInstructions(os) {
+      const modal = document.getElementById(os + 'Modal');
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Close the modal if the user clicks anywhere outside of the modal content
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+      }
+    }
+
   </script>
 </body>
 <!-- Google tag (gtag.js) -->
