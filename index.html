@@ -443,22 +443,21 @@
         <p>Download the software version for your platform below. No sign-up required.</p>
       </div>
       <div class="download-section">
-        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.4.1/LagnaOne.2.4.1.exe" class="btn">Download for Windows</a>
+        <a href="https://github.com/bhagwate/LagnaOne/releases/download/Ver-2.4.2/LagnaOne.2.4.2.exe" class="btn">Download for Windows</a>
         <button class="btn" onclick="showInstructions('mac')">Download for macOS</button>
         <button class="btn" onclick="showInstructions('linux')">Download for Linux</button>
       </div>
-      <p><span style="color: green">Download links are live. Version 2.4.1 has been released on 04-Nov-2025 with minor bug fixes and enhancements.</span> For important announcements, join LagnaOne's <a href="https://t.me/LagnaOne">Telegram channel</a>.</p>
+      <p><span style="color: green">Download links are live. Version 2.4.2 has been released on 14-Nov-2025 with minor bug fixes and enhancements.</span> For important announcements, join LagnaOne's <a href="https://t.me/LagnaOne">Telegram channel</a>.</p>
       <p><span style="line-height:2.0; font-size: 18px;"><strong>Known issues and shortcomings:</strong></span>
         <span style="line-height:1.6;">
           <li>Due to restrictions imposed in Mac (macOS), please follow the Download instructions that you see when you click Download button. Restriction in macOS for 3rd party apps is well known behaviour which can be resolved by user environment changes - most often user permissions and other simple settings explained in download instructions in next step. Additionally, there are many well known Youtube videos on this topic.</li>
-          <li>Pdf export link in Chart -> Export is not working currently. This will be fixed in future release.</li>          
-          <li>At this stage LagnaOne provides 7 most widely used/popular dasha systems. This will continue to grow in subsequent versions.</li>          
+          <li>Pdf export link in Chart -> Export is not working currently. There is however a workaround available - first export to html (by clicking Export to HTML button), it saves an html file on your computer. Then open the html file in a browser window by double-click on the file name. It opens the output in browser window. Do File->Print from browser menu or press Ctrl+P, then select "Export to pdf" option. It saves it as pdf file. Direct export to pdf from LagnaOne will be fixed in future release.</li>                            
           <li><strong>Any changes in user profile or preferences related to display or calculations are applied in next session or a new window load. Select Chart -> New from main-menu and the new session starts. This will apply the changes e.g. chart style (north/south/east), colour theme, ayanamsa, etc.</strong></li>
-          <li>For running on Linux, ensure that you have FUSE library installed (libfuse2 or libfuse3 depending on Linux flavour/version).</li>
+          <li>For running on Linux, ensure that you have FUSE library or FUSE manager installed (libfuse2 or libfuse3 depending on Linux flavour/version).</li>
           <li>Help topics will be expanded in every new version. The Astrology articles in Help section have been curated from author's website in automated fashion using browser extension. They are all opened offline in the application and do not need internet connection to read inside the application. The articles themselves contain the links  as they are present in the source website - this is automatically done by the browser extensions that curated the articles in pdf.</li></span></p>
-      <p>LagnaOne has many new features of birth details based customised predictions for dasha, transits and nakshatra years, numerology turning points, pinnacle years, etc. which <span style="color: red;">should be used strictly for analysis and study purpose only</span>.</p>      
+      <p>LagnaOne has many new features of birth details based customised predictions for dasha, transits and nakshatra years, progressions, active houses in various dashas, result-oriented transit points (phalit sphuta), numerology turning points, pinnacle years, etc. which <span style="color: red;">should be used strictly for analysis and study purpose only</span>.</p>      
       <p>For announcements of new version release and features of LagnaOne, join it's Telegram channel:<br><a href="https://t.me/LagnaOne">https://t.me/LagnaOne</a></p>
-      <p>To report bugs, issues, new feature request or feedback/suggestions pls submit a very short form in Issue-tracker:<br><a href="https://LagnaOneIssues.pythonanywhere.com">https://LagnaOneIssues.pythonanywhere.com</a></p>
+      <p>To report bugs, issues, new feature request or feedback/suggestions please submit a simple form in Issue-tracker:<br><a href="https://LagnaOneIssues.pythonanywhere.com">https://LagnaOneIssues.pythonanywhere.com</a></p>
     </div>
     
     <div id="screenshots" class="tab-content">
@@ -650,7 +649,7 @@
       <span class="close-btn" onclick="hideInstructions('mac')">&times;</span>
       <h2>Instructions for Mac Users</h2>
       <div class="modal-download-section">
-        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.4.1/LagnaOne-2.4.1-arm64.dmg" class="btn">CLICK HERE TO DOWNLOAD .dmg</a>
+        <a href="https://github.com/bhagwate/LagnaOne/releases/download/Ver-2.4.2/LagnaOne-2.4.2-arm64.dmg" class="btn">CLICK HERE TO DOWNLOAD .dmg</a>
       </div>
       <div class="instructions-text">
         <p><strong>Actions to take AFTER downloading (copy/paste and save):</strong></p>
@@ -681,22 +680,22 @@
       <span class="close-btn" onclick="hideInstructions('linux')">&times;</span>
       <h2>Instructions for Linux Users</h2>
        <div class="modal-download-section">
-        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.4.1/LagnaOne-2.4.1.AppImage" class="btn">CLICK HERE TO DOWNLOAD .AppImage</a>
+        <a href="https://github.com/bhagwate/LagnaOne/releases/download/Ver-2.4.2/LagnaOne-2.4.2.AppImage" class="btn">CLICK HERE TO DOWNLOAD .AppImage</a>
       </div>
       <div class="instructions-text">
         <p>Please <strong>ensure that you have Fuse installed</strong>. You can either install some Fuse manager tool or do the following steps to handle Fuse. Linux system requirements for LagnaOne - The FUSE package (libfuse2 or libfuse3) must be installed, because AppImage needs it to mount itself when run.</p>
         <h3>For most Debian based systems like Ubuntu, Mint, Zorin etc.:</h3>
         <code>sudo apt update
 sudo apt install libfuse2
-chmod +x LagnaOne-2.4.1.AppImage</code>
+chmod +x LagnaOne-2.4.2.AppImage</code>
         <p>Then run LagnaOne on prompt as:</p>
-        <code>./LagnaOne-2.4.1.AppImage</code>
+        <code>./LagnaOne-2.4.2.AppImage</code>
         <h3>For most Fedora based systems:</h3>
         <code>sudo dnf install fuse fuse-devel</code>
         <h3>For RedHat Linux:</h3>
         <code>sudo dnf install libfuse</code>
         <p>In older systems: <code>sudo yum update</code> then <code>sudo yum install fuse fuse-libs</code><br>
-        If ./LagnaOne.AppImage says file not found then do ./LagnaOne-2.4.1.AppImage </p>
+        If ./LagnaOne.AppImage says file not found then do ./LagnaOne-2.4.2.AppImage </p>
       </div>
     </div>
   </div>
