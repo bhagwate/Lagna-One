@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Not Found | Your Site Name</title>
+    <style>
+        body { font-family: system-ui, sans-serif; text-align: center; padding: 50px; }
+        .suggestion { margin-top: 20px; color: #555; }
+    </style>
+</head>
+<body>
+    <h1>LagnaOne has moved</h1>
+    <p>LagnaOne moved to AstroLagnaOne.in.net</p>
+    
+    <div class="suggestion" id="suggestion"></div>
+    
+    <p><a href="/">Take me to LagnaOne</a></p>
+    
+    <script>
+        // Attempt to redirect based on matching path structure
+        // If old site had the same URL structure, this helps
+        var path = window.location.pathname;
+        document.getElementById('suggestion').innerHTML = 
+            '<p>Did you arrive from an old link? The content has moved to our new home.</p>' +
+            '<p><strong>Current page:</strong> ' + window.location.href + '</p>';
+        
+        // Optional: If your old and new repos share the same structure,
+        // you can auto-redirect to the homepage or search
+        // window.location.replace('/');  // Uncomment if you want auto-redirect to home
+    </script>
+</body>
+</html>
