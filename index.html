@@ -711,13 +711,38 @@
 sudo apt install libfuse2
 chmod +x LagnaOne-2.4.5.AppImage</code>
         <p>Then run LagnaOne on prompt as:</p>
-        <code>./LagnaOne-2.4.5.AppImage</code>
+        <code>./LagnaOne-2.4.5.AppImage --no-sandbox</code>
         <h3>For most Fedora based systems:</h3>
         <code>sudo dnf install fuse fuse-devel</code>
         <h3>For RedHat Linux:</h3>
         <code>sudo dnf install libfuse</code>
         <p>In older systems: <code>sudo yum update</code> then <code>sudo yum install fuse fuse-libs</code><br>
-        If ./LagnaOne.AppImage says file not found then do ./LagnaOne-2.4.5.AppImage </p>
+        <!--If ./LagnaOne.AppImage says file not found then do ./LagnaOne-2.4.5.AppImage -->
+        Useful Tip: Create a shell script with following content and save it in same folder/directory as the downloaded .AppImage file. Name the shell script as run_lagnaone.sh
+        <code>#!/bin/bash
+
+APP="LagnaOne-x.x.x.AppImage"
+
+if ! ldconfig -p | grep -q fuse; then
+    echo ""
+    echo "FUSE library not detected."
+    echo ""
+    echo "Ubuntu/Debian:"
+    echo "sudo apt install libfuse2"
+    echo ""
+    echo "Ubuntu 24.04:"
+    echo "sudo apt install libfuse2t64"
+    echo ""
+    exit 1
+fi
+
+chmod +x "$APP"
+./"$APP" --no-sandbox</code>
+        After saving the above shell script as run_lagnaone.sh give it execute permission:
+        <code>chmod +x ./run_lagnaone.sh</code>
+        To run it, always do:
+        <code>./run_lagnaone.sh</code>
+        </p>
       </div>
     </div>
   </div>
