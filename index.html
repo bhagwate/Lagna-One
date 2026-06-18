@@ -718,10 +718,10 @@ chmod +x LagnaOne-2.4.5.AppImage</code>
         <code>sudo dnf install libfuse</code>
         <p>In older systems: <code>sudo yum update</code> then <code>sudo yum install fuse fuse-libs</code><br>
         <!--If ./LagnaOne.AppImage says file not found then do ./LagnaOne-2.4.5.AppImage -->
-        Useful Tip: Create a shell script with following content and save it in same folder/directory as the downloaded .AppImage file. Name the shell script as run_lagnaone.sh
+        <b>Useful Tip:</b> Create a shell script with following content and save it in same folder/directory as the downloaded .AppImage file. Name the shell script as run_lagnaone.sh
         <code>#!/bin/bash
 
-APP="LagnaOne-x.x.x.AppImage"
+APP="LagnaOne-2.4.5.AppImage"
 
 if ! ldconfig -p | grep -q fuse; then
     echo ""
