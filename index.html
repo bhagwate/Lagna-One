@@ -742,6 +742,15 @@ chmod +x "$APP"
         <code>chmod +x ./run_lagnaone.sh</code>
         To run it, always do:
         <code>./run_lagnaone.sh</code>
+        If you wish to launch LagnaOne from desktop, create the desktop script named LagnaOne.desktop with following content and save in your desktop. Change the '/path/to/where/is/run_lagnaone.sh' to your correct file location:
+        <code>[Entry]
+Type=Application
+Name=LagnaOne
+Comment=Launch LagnaOne Application
+Exec=/path/to/where/is/run_lagnaone.sh
+Terminal=false
+Categories=Utility;</code>
+After saving in desktop, right-click the file, select Properties, then enable Executable as program, close it. Again right-click on file, select "Allow launching" once. That's all! Double click starts LagnaOne. 
         </p>
       </div>
     </div>
