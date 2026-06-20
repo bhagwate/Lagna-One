@@ -465,10 +465,97 @@
         <p>Download the software version for your platform below. No sign-up required.</p>
       </div>
       <div class="download-section">
-        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.4.5_pub/LagnaOne_2.4.5.exe" class="btn">Download for Windows</a>
-        <button class="btn" onclick="showInstructions('mac')">Download for macOS</button>
-        <button class="btn" onclick="showInstructions('linux')">Download for Linux</button>
-      </div>
+
+  <style>
+    .download-section .platform-grid {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .download-section .platform-card {
+      width: 180px;
+      text-align: center;
+    }
+
+    .download-section .platform-image {
+      width: 100%;
+      height: 100px;
+      object-fit: contain;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .download-section .platform-title {
+      margin: 0 0 10px 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .download-section .platform-btn {
+      display: inline-block;
+      width: 100%;
+      padding: 10px 12px;
+      border: none;
+      border-radius: 6px;
+      background: #835d80;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.975rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+
+    .download-section .platform-btn:hover {
+      background: #1d4ed8;
+    }
+
+    @media (max-width: 700px) {
+      .download-section .platform-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .download-section .platform-card {
+        width: 220px;
+      }
+    }
+  </style>
+
+  <div class="platform-grid">
+
+    <div class="platform-card">
+      <img src="./images/windows.jpg" alt="Windows" class="platform-image">
+      <h3 class="platform-title">Windows</h3>
+      <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.4.5_pub/LagnaOne_2.4.5.exe"
+         class="platform-btn">
+        Download
+      </a>
+    </div>
+
+    <div class="platform-card">
+      <img src="./images/macOS.jpg" alt="macOS" class="platform-image">
+      <h3 class="platform-title">macOS</h3>
+      <button class="platform-btn" onclick="showInstructions('mac')">
+        Download
+      </button>
+    </div>
+
+    <div class="platform-card">
+      <img src="./images/linux.jpg" alt="Linux" class="platform-image">
+      <h3 class="platform-title">Linux</h3>
+      <button class="platform-btn" onclick="showInstructions('linux')">
+        Download
+      </button>
+    </div>
+
+  </div>
+
+</div>
       <p><span style="color: green">Download links are live. Version 2.4.5 has been released on 19-Jun-2026 with UI enhancements, charts saving fix and nadi-amsa enhancements.</span> For important announcements, join LagnaOne's <a href="https://t.me/LagnaOne">Telegram channel</a>.</p>
       <p><span style="line-height:2.0; font-size: 18px;"><strong>Known issues and shortcomings:</strong></span>
         <div style="line-height:1.6; padding-left: 4px; padding-right: 4px; text-align: justify;">
