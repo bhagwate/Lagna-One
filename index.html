@@ -3,349 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LagnaOne – Jyotiṣa (Vedic Astrology) App</title>
+  <title>LagnaOne – Free Offline Vedic & Nadi Astrology Software</title>
+  <meta name="description" content="LagnaOne is a 100% free, fully offline, cross-platform Vedic and Nadi astrology software for Windows, Mac, and Linux. A fast, modern alternative to Jagannatha Hora (JHora), Parashara’s Light, Kala, and LeoStar. Discover advanced tools, dashas, and chakras." />
+  <meta name="keywords" content="Vedic astrology software, Vedic astrology application, Nadi astrology, Jagannatha Hora, Jhora, PVR Narasimha Rao, Mindsutra Software, Parashara’s Light, LeoStar, Kala Vedic Astrology Software, free astrology software mac, free offline astrology app, LagnaOne, Partho Banerjee" />
+  <meta property="og:title" content="LagnaOne – Free Offline Vedic & Nadi Astrology Software" />
+  <meta property="og:description" content="Generations ahead of JHora. Download the ultimate free, offline Jyotisha software for Windows, Mac, and Linux." />
+  <meta property="og:url" content="https://AstroLagnaOne.in.net/index.html" />
   <link rel="canonical" href="https://AstroLagnaOne.in.net/" />
   <link rel="icon" type="image/png" href="favicon.png">
   <meta name="google-site-verification" content="LrUAHs1tQZnIZT4UilmofgUsNcENFeJa7N1TU_zabWA" />
   <meta name="msvalidate.01" content="B9E71E7D0469436FCD6DFA972D27D8F8" />
   <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Roboto, sans-serif;
-      background: radial-gradient(circle, #e9e9f4, #FDF0E1, #f1f5fc);
-      color: #333;
-    }
-    header {
-      background-color: #f0f0f0;
-      color: #2c3e50;
-      padding: 1rem 2rem;
-      text-align: center;
-    }
-    h1 {
-      margin: 0.2em 0;
-      font-size: 2rem;
-    }
-    .tabs {
-      max-width: 800px;
-      margin: 1rem auto;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
-    }
-    .tab-btn {
-      padding: 0.75rem 1.5rem;
-      background-color: #835D80;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .tab-btn:hover, .tab-btn.active {
-      background-color: #6a0dad;
-    }
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .tab-content {
-      display: none;
-    }
-    .tab-content.active {
-      display: block;
-    }
-    .description {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .description h2 {
-      color: #835D80;
-      margin-top: 1.5rem;
-    }
-    .description ul {
-      padding-left: 1.5rem;
-    }
-    .description li {
-      margin-bottom: 0.5rem;
-    }
-    .download-section {
-      margin-top: 2rem;
-      text-align: center;
-    }
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      margin: 0.5rem;
-      background-color: #835D80;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: background 0.3s ease;
-      border: none; /* For button elements */
-      cursor: pointer; /* For button elements */
-    }
-    .btn:hover {
-      background-color: #6a0dad;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 1rem;
-      color: #777;
-    }
-
-    /* Slideshow container */
-    .slideshow-container {
-      max-width: 1000px;
-      position: relative;
-      margin: auto;
-    }
-
-    /* Hide the images by default */
-    .mySlides {
-      display: none;
-    }
-    
-    .mySlides img {
-        width: 100%;
-        border-radius: 10px;
-    }
-
-    /* Next & previous buttons */
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      margin-top: -22px;
-      padding: 16px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-      background-color: rgba(0,0,0,0.3);
-    }
-
-    /* Position the "next button" to the right */
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.8);
-    }
-
-    /* Caption text */
-    .text {
-      color: #f2f2f2;
-      font-size: 15px;
-      padding: 8px 12px;
-      position: absolute;
-      bottom: 8px;
-      width: 100%;
-      text-align: center;
-      background-color: rgba(0,0,0,0.5);
-      border-radius: 0 0 10px 10px;
-    }
-
-    /* Number text (1/3 etc) */
-    .numbertext {
-      color: #f2f2f2;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
-      background-color: rgba(0,0,0,0.5);
-      border-radius: 10px 0 0 0;
-    }
-
-    /* The dots/bullets/indicators */
-    .dot-container {
-        text-align: center;
-        padding-top: 10px;
-    }
-    .dot {
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-    }
-
-    .active-dot, .dot:hover {
-      background-color: #717171;
-    }
-
-    /* Fading animation */
-    .fade {
-      animation-name: fade;
-      animation-duration: 1.5s;
-    }
-
-    @keyframes fade {
-      from {opacity: .4}
-      to {opacity: 1}
-    }
-    
-    /* License Text Area */
-    #license-text {
-        width: 95%;
-        height: 400px;
-        padding: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        font-family: monospace, sans-serif;
-        white-space: pre-wrap;
-        overflow-y: scroll;
-        background-color: #fff;
-        color: #333;
-        resize: none;
-    }
-    
-    /* Video frame */
-    .iframe-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;      
-    }
-    .header-container {
-      display: flex;
-      align-items: center;
-      justify-content: center; /* keeps logo + text centered */
-      gap: 15px;
-      text-align: left; /* avoids double-centering inside */
-    }
-    .logo {
-      width: 85px;
-      height: 55px;
-      border-radius: 12px;   /* or 50% for circle */
-      object-fit: contain;   /* ensures full image fits */
-      background-color: white; /* optional: fills any empty space */
-      padding: 0px;           /* optional: neat spacing inside */
-      flex-shrink: 0;
-    }
-    .title-text h1 {
-      margin: 0;
-    }
-
-    .title-text p {
-      margin: 0;
-      font-size: 1rem;
-    }
-    
-    /* NEW STYLES FOR INSTRUCTIONS MODAL */
-    .modal {
-      display: none; 
-      position: fixed; 
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.6);
-      animation: fadeIn 0.3s;
-    }
-
-    @keyframes fadeIn {
-        from {opacity: 0}
-        to {opacity: 1}
-    }
-
-    .modal-content {
-      background-color: #fefefe;
-      margin: 5% auto;
-      padding: 25px 30px;
-      border: 1px solid #888;
-      width: 90%;
-      max-width: 750px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      position: relative;
-      animation: slideIn 0.4s;
-    }
-    
-    @keyframes slideIn {
-        from {top: -100px; opacity: 0}
-        to {top: 0; opacity: 1}
-    }
-
-    .close-btn {
-      color: #aaa;
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .close-btn:hover,
-    .close-btn:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    
-    .instructions-text {
-        text-align: left;
-        margin-top: 1.5rem;
-        font-size: 0.95rem;
-        line-height: 1.7;
-        max-height: 60vh;
-        overflow-y: auto;
-        padding-right: 15px;
-    }
-
-    .instructions-text h3 {
-        color: #835D80;
-        margin-top: 1.2rem;
-        margin-bottom: 0.5rem;
-        border-bottom: 1px solid #eee;
-        padding-bottom: 5px;
-    }
-    
-    .instructions-text p {
-        margin-bottom: 1rem;
-    }
-
-    .instructions-text code {
-        background-color: #e9e9e9;
-        padding: 3px 8px;
-        border-radius: 5px;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 0.9rem;
-        color: #333;
-        display: block;
-        margin: 0.5rem 0;
-        white-space: pre-wrap;
-        word-break: break-all;
-    }
-    
-    .modal-content h2 {
-        text-align: center;
-        color: #835D80;
-        margin-top: 0;
-    }
-    
-    .modal-download-section {
-        text-align: center;
-        margin: 1rem 0;
-    }
-
+    body { margin: 0; font-family: "Segoe UI", Roboto, sans-serif; background: radial-gradient(circle, #e9e9f4, #FDF0E1, #f1f5fc); color: #333; }
+    header { background-color: #f0f0f0; color: #2c3e50; padding: 1rem 2rem; text-align: center; }
+    h1 { margin: 0.2em 0; font-size: 2rem; }
+    .header-container { display: flex; align-items: center; justify-content: center; gap: 15px; text-align: left; }
+    .logo { width: 85px; height: 55px; border-radius: 12px; object-fit: contain; background-color: white; padding: 0px; flex-shrink: 0; }
+    .title-text h1 { margin: 0; }
+    .title-text p { margin: 0; font-size: 1rem; }
+    .tabs { max-width: 800px; margin: 1rem auto; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .tab-btn { padding: 0.75rem 1.5rem; background-color: #835D80; color: white; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; transition: background 0.3s ease; text-decoration: none; text-align: center; }
+    .tab-btn:hover, .tab-btn.active { background-color: #6a0dad; }
+    .container { max-width: 800px; margin: 2rem auto; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .description { font-size: 1.1rem; line-height: 1.6; }
+    .description h2 { color: #835D80; margin-top: 1.5rem; }
+    .description ul { padding-left: 1.5rem; }
+    .description li { margin-bottom: 0.5rem; }
+    .iframe-container { display: flex; justify-content: center; align-items: center; }
+    footer { text-align: center; font-size: 0.9rem; padding: 1rem; color: #777; }
   </style>
 </head>
 <body>
@@ -360,391 +45,110 @@
   </header>
 
   <div class="tabs">
-    <button class="tab-btn active" onclick="openTab('introduction')">Introduction</button>
-    <button class="tab-btn" onclick="openTab('download')">Download</button>
-    <button class="tab-btn" onclick="openTab('screenshots')">Screenshots</button>
-    <button class="tab-btn" onclick="openTab('license')">License</button>
-    <button class="tab-btn" onclick="openTab('about')">About Author</button>
+    <a href="index.html" class="tab-btn active">Introduction</a>
+    <a href="download.html" class="tab-btn">Download</a>
+    <a href="screenshots.html" class="tab-btn">Screenshots</a>
+    <a href="license.html" class="tab-btn">License</a>
+    <a href="about.html" class="tab-btn">About Author</a>
   </div>
 
   <div class="container">
-    <div id="introduction" class="tab-content active">
-      <div class="description">
-        <div style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #e0f2fe, #bae6fd); color: #0369a1; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; font-weight: 600; padding: 6px 16px; border-radius: 9999px; border: 1px solid #7dd3fc; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); width: fit-content; margin: 10px 0;">
-  <span style="display: inline-block; width: 8px; height: 8px; background-color: #0ea5e9; border-radius: 50%; animation: pulse 2s infinite;"></span>
-  <span>Trusted by 50,000+ users</span>
-  
-  <style>
-    @keyframes pulse {
-      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.7); }
-      70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(14, 165, 233, 0); }
-      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(14, 165, 233, 0); }
-    }
-  </style>
-</div>
-
-
-        <h2>Introduction to Free, Offline Vedic Astrology Software</h2>
-        <p>Welcome to LagnaOne, a super-easy tool designed for Jyotiṣa students, enthusiasts, professionals and seekers — a <strong>100% offline Vedic astrology software</strong> that’s completely free of cost, ad-free and will remain so forever. Crafted with passion and precision, this <strong>cross-platform application</strong> brings the ancient wisdom of Vedic astrology to your fingertips, offering high flexibility, modern design, and zero-cost accessibility with no internet connection.</p>
-        <span style="color: #835d80; text-align: center; display: block;"><strong>Short user interface demo - LagnaOne</strong></span>
-        <div class="iframe-container">
-          <iframe width="560" height="315" style="border-radius: 15px;" src="https://www.youtube.com/embed/HnJQU4Ui6fs" title="Short Demo LagnaOne laptop software"  frameborder="0" allowfullscreen>
-          </iframe>
-        </div>
-        <br>
-        <span style="color: #835d80; text-align: center; display: block;"><strong>3 Accurate Predictive Features in LagnaOne</strong></span>
-        <div class="iframe-container">
-          <iframe width="560" height="315" style="border-radius: 15px;" src="https://www.youtube.com/embed/q20gg6xIhik" title="LagnaOne software prediction demo video"  frameborder="0" allowfullscreen>
-          </iframe>
-        </div>
-        <hr style="width: 95%; border: none; border-top: 1px solid #e2e8f0; margin: 20px 0;">
-        <h3 style="background-color: #f0f4f8; color: #2a1c67; padding: 5px 7px; margin-top: 7px; margin-bottom: 9px; border-radius: 12px; width: 95%; box-sizing: border-box; font-family: sans-serif;">Key Features and Benefits</h3>
-        <h4 style="color: #260240;">1. Complete Offline Functionality</h4>
-        <ul>
-          <li>LagnaOne operates entirely offline, ensuring you can perform astrological calculations, generate charts, and analyze planetary positions anytime, anywhere—whether you're in a remote village, traveling, or simply prefer a disconnected experience.</li>
-          <li>Ideal for uninterrupted focus during consultations, study sessions, or research, free from network dependencies or data privacy concerns.</li>
-        </ul>
-        <div style="background:#f5f7fa; padding:10px; border-left:4px solid #d0d7de; border-radius:4px;">
-          <a href="https://www.astrologyofbharat.org/2025/12/practical-vedic-nadi-astrology-course-online-challenges.html">Online Astrology Learning - Overcoming 12 Challenges to Predictions</a>
-        </div>
-        <h4 style="color: #260240;">2. Modern, Intuitive User Interface</h4>
-        <ul>
-          <li>The software features a sleek, user-friendly interface that blends modern aesthetics with the timeless essence of Jyotiṣa or Vedic astrology.</li>
-          <li>Easy navigation, customizable themes, and responsive layouts make it a joy to use on desktops, laptops, or low-spec devices, ensuring accessibility for all. Tabs and mobile devices will be covered independently in near future - as of now it's being released for computers/laptops.</li>
-        </ul>
-        <h4 style="color: #260240;">3. Comprehensive Astrological Tools</h4>
-        <ul>
-          <li>Analyse and study charts with <strong>dates in 2000 years in the past and 500 years in future</strong> at no cost.</li>
-          <li>Generate precise and visually appealing <strong>natal charts</strong>, <strong>shodash-vargas or 16 divisional charts in popular terminology </strong> (up to D-60), <strong>dashas</strong> (Vimshottari, Ashtottari, Yogini etc.), ashtakavargas, planetary strength (shad-bala), <strong>details of nakshatras in chart</strong> with healing and mantras, varshaphala (solar return), tithi pravesh, customised chart analysis, custom <strong>transit favourability scorecard</strong>, detailed Hora (hours) view, <strong>rich collection of progression systems</strong> for prediction, authentic <strong>Tamil nadi jyotiṣa</strong> tools like nadi-amsa, chakras e.g. sarvatobhadra, sudarshan chakra along-with <strong>transit charts and predictions</strong> with algorithms based on authentic Jyotiṣa text. Some traditionally popular predictive features like Murti-nirnaya for transits but lost in Jyotiṣa classical text have also been included. </li>
-          <li>Explore detailed <strong>planetary positions</strong>, <strong>vargas</strong>, <strong>chakras</strong>, and <strong>upcoming transits</strong> calculations to deepen your astrological insights.</li>
-          <li>Seekers and students of Jyotiṣa have been given a <strong>dedicated Student's Corner</strong> with learning aids and tools for analysis/predictions. The focus here is mostly on practical application of theoretical concepts.</li>
-          <li>Built-in <strong>interpretation guides</strong> and reference tables assist beginners while offering advanced tools like <strong>customised lucky weekday/direction</strong> selection and <strong>planets in chakras, directional (RG Rao nadi) chart, numerological turning points in life</strong> for seasoned practitioners and seekers.</li>
-          <li>Focus of LagnaOne is not just to be another available option amongst Jyotiṣa softwares - there are many good ones available for free as well as paid. LagnaOne is about adding practical value at every step of the way. It goes beyond displaying the calculation, tables and charts. <strong>The vision of LagnaOne's author</strong> is to free Jyotiṣa from the usual bureaucracy by means of having conclusive practical action points as outcome of Jyotiṣa application. Using Jyotiṣa to enrich lives and better understand our karmic progression is the vision that drives it. It's far from being perfect but it's designed to grow with the community. </li>
-        </ul>
-        <div style="text-align: center;"><img style="width: 90%; height: auto; display: block; margin-left: auto; margin-right: auto; border-radius: 25px;" src="vedic_astro_LagnaOne_free_software.jpg" alt="LagnaOne Desktop Application for Vedic Nadi Astrology"></div>
-        <h4 style="color: #260240;">4. Flexible for All Users</h4>
-        <ul>
-          <li><strong>Students</strong>: Learn Vedic astrology with "students corner" that help in honing application skills at earlier stages of learning Jyotiṣa, making complex artifacts and abstract concepts more comprehensible while reading charts.</li>
-          <li><strong>Enthusiasts</strong>: Experiment with charts, explore planetary influences, and save unlimited profiles categorised as friends, family or celebrities/famous personalities or any other types.</li>
-          <li><strong>Professionals</strong>: Streamline consultations with ready made predictive dashboards, graphs, printable reports, and tools tailored for daily practice, all the while maintaining client data securely offline.</li>
-        </ul>
-        <h4 style="color: #260240;">5. Forever Free, No Strings Attached</h4>
-        <ul>
-          <li>This software is a labour of love, offered completely free with <strong>no ads</strong>, <strong>no in-app purchases</strong>, and <strong>no premium/freemium versions</strong>—now or ever.</li>
-          <li>Save on costly subscriptions or proprietary tools while enjoying professional-grade features, making Vedic astrology accessible to everyone, regardless of financial means.</li>
-        </ul>
-        <h4 style="color: #260240;">6. Cross-Platform Compatibility</h4>
-        <ul>
-          <li>Available for <strong>Windows</strong>, <strong>macOS</strong> and <strong>Linux</strong>, ensuring you can use it on your preferred device. Mac usually has some permission issues with independently downloaded executable programs so saving charts and user profile is facing some challenges in Mac at this time to which workarounds are being looked into - this is work in progress. Other usual stuff are working in Mac though.</li>
-          <li>Lightweight and optimized, it runs smoothly even on older hardware, democratizing access to high-quality astrological tools.</li>
-        </ul>
-        <h4 style="color: #260240;">7. Easy to Download and Install</h4>
-        <ul>
-          <li>Get started in minutes with a hassle-free download from the Download page and a simple installation process.</li>
-          <li>Regular updates (also offline-installable) announced via Telegram channel ensures that you always have the latest features and bug fixes without compromising the private offline experience.</li>
-        </ul>
-        <h4 style="color: #260240;">8. Secure and Private</h4>
-        <ul>
-          <li>With all data stored locally on your device, your charts, client details, and personal notes remain completely private—no cloud servers, no tracking, no worries.</li>
-          <li>Perfect for professionals who prioritize confidentiality and users who value data sovereignty.</li>
-        </ul>
-        <hr style="width: 95%; border: none; border-top: 1px solid #e2e8f0; margin: 20px 0;">
-        <h3 style="background-color: #f0f4f8; color: #2a1c67; padding: 5px 7px; margin-top: 7px; margin-bottom: 9px; border-radius: 12px; width: 95%; box-sizing: border-box; font-family: sans-serif;">Why LagnaOne Stands Out</h3>
-        <p>LagnaOne astrology software isn’t just an astrology tool—it’s a bridge between traditional wisdom and modern technology to maximise the value of that wisdom to enrich our lives today. Whether you’re casting your first chart or conducting advanced research, its blend of <strong>precision</strong>, <strong>accessibility</strong>, and <strong>modern design</strong> empowers you to explore the cosmos with confidence. By being forever free and fully offline, it removes barriers, making the profound wisdom of Jyotiṣa available to all.</p>
-        <p>Future version for which development is going-on in full swing will integrate Ayurveda fundamentals and more dasha systems - that's a promise. LagnaOne is designed to widen the tunnel-narrow view of modern (and popular) Jyotiṣa practice to something more profound and "cosmic", that Jyotiṣa was originally devised to be. However, this will be done whilst fully utilising the insights provided by technology.</p>
-        <hr style="width: 95%; border: none; border-top: 1px solid #e2e8f0; margin: 20px 0;">
-        <h3>How to get</h3>
-        <p>Click on the Download tab (at the top of this page), then click on the button for your operating system - Windows, macOS or Linux that your desktop/laptop uses. You can embark on your astrological journey with ease and clarity. Whether you are a curious beginner, a seasoned astrologer or a Jyotiṣa seeker, this tool is designed to grow with you.</p>
-        <p><em>Let LagnaOne guide you, offline and free, forever.</em></p>
+    <div class="description">
+      <div style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #e0f2fe, #bae6fd); color: #0369a1; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; font-weight: 600; padding: 6px 16px; border-radius: 9999px; border: 1px solid #7dd3fc; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); width: fit-content; margin: 10px 0;">
+        <span style="display: inline-block; width: 8px; height: 8px; background-color: #0ea5e9; border-radius: 50%; animation: pulse 2s infinite;"></span>
+        <span>Trusted by 50,000+ users</span>
+        <style>
+          @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(14, 165, 233, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(14, 165, 233, 0); }
+          }
+        </style>
       </div>
-    </div>
 
-    <div id="download" class="tab-content">
-      <div class="description">
-        <p><strong>LagnaOne</strong> is a fast, offline, and free Vedic astrology software for Windows, Mac, and Linux. It includes North/South/East Indian charts, dashas, vargas (navamsa, hora, etc), customized transit tools, progressions, tithi pravesh, annual horoscope (varshphal), authentic Tamil nadi jyotiṣa tools like nadi-amsa,  numerology turning point years, directional chart (RG Rao nadi), planets in our inner chakras (Muladhar, Swadhishthan, etc.), customised Ayurveda productive hours and many more interesting perspectives that are often not prioritised in typical astrology softwares.</p>        
-        <p>Download the software version for your platform below. No sign-up required.</p>
+      <h2>Introduction to Free, Offline Vedic Astrology Software</h2>
+      <p>Welcome to LagnaOne, a super-easy tool designed for Jyotiṣa students, enthusiasts, professionals and seekers — a <strong>100% offline Vedic astrology software</strong> that’s completely free of cost, ad-free and will remain so forever. Crafted with passion and precision, this <strong>cross-platform application</strong> brings the ancient wisdom of Vedic astrology to your fingertips, offering high flexibility, modern design, and zero-cost accessibility with no internet connection.</p>
+      
+      <span style="color: #835d80; text-align: center; display: block;"><strong>Short user interface demo - LagnaOne</strong></span>
+      <div class="iframe-container">
+        <iframe width="560" height="315" style="border-radius: 15px;" src="https://www.youtube.com/embed/HnJQU4Ui6fs" title="Short Demo LagnaOne laptop software" frameborder="0" allowfullscreen></iframe>
       </div>
-      <div class="download-section">
-
-  <style>
-    .download-section .platform-grid {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .download-section .platform-card {
-      width: 180px;
-      text-align: center;
-    }
-
-    .download-section .platform-image {
-      width: 100%;
-      height: 100px;
-      object-fit: contain;
-      display: block;
-      margin-bottom: 12px;
-    }
-
-    .download-section .platform-title {
-      margin: 0 0 10px 0;
-      font-size: 1rem;
-      font-weight: 600;
-      color: #333;
-    }
-
-    .download-section .platform-btn {
-      display: inline-block;
-      width: 100%;
-      padding: 10px 12px;
-      border: none;
-      border-radius: 6px;
-      background: #835d80;
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.975rem;
-      font-weight: 600;
-      cursor: pointer;
-      box-sizing: border-box;
-    }
-
-    .download-section .platform-btn:hover {
-      background: #1d4ed8;
-    }
-
-    @media (max-width: 700px) {
-      .download-section .platform-grid {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .download-section .platform-card {
-        width: 220px;
-      }
-    }
-  </style>
-
-  <div class="platform-grid">
-
-    <div class="platform-card">
-      <img src="./images/windows.jpg" alt="Windows" class="platform-image">
-      <h3 class="platform-title">Windows</h3>
-      <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.4.5_pub/LagnaOne_2.4.5.exe"
-         class="platform-btn">
-        Download
-      </a>
-    </div>
-
-    <div class="platform-card">
-      <img src="./images/macOS.jpg" alt="macOS" class="platform-image">
-      <h3 class="platform-title">macOS</h3>
-      <button class="platform-btn" onclick="showInstructions('mac')">
-        Download
-      </button>
-    </div>
-
-    <div class="platform-card">
-      <img src="./images/linux.jpg" alt="Linux" class="platform-image">
-      <h3 class="platform-title">Linux</h3>
-      <button class="platform-btn" onclick="showInstructions('linux')">
-        Download
-      </button>
-    </div>
-
-  </div>
-
-</div>
-      <p><span style="color: green">Download links are live. Version 2.4.5 has been released on 19-Jun-2026 with UI enhancements, charts saving fix and nadi-amsa enhancements.</span> For important announcements, join LagnaOne's <a href="https://t.me/LagnaOne">Telegram channel</a>.</p>
-      <p><span style="line-height:2.0; font-size: 18px;"><strong>Known issues and shortcomings:</strong></span>
-        <div style="line-height:1.6; padding-left: 4px; padding-right: 4px; text-align: justify;">
-          <li>Due to restrictions imposed in Mac (macOS), please follow the Download instructions that you see when you click Download button. Restriction in macOS for 3rd party apps is well known behaviour which can be resolved by user environment changes - most often user permissions and other simple settings explained in download instructions in next step. Additionally, there are many well known Youtube videos on this topic.</li>
-          <li>Pdf export link in Chart -> Export is not working currently. There is however a workaround available - first export to html (by clicking Export to HTML button), it saves an html file on your computer. Then open the html file in a browser window by double-click on the file name. It opens the output in browser window. Do File->Print from browser menu or press Ctrl+P, then select "Export to pdf" option. It saves it as pdf file. Direct export to pdf from LagnaOne will be fixed in future release.</li>                            
-          <li><strong>Any changes in user profile or preferences related to display or calculations are applied in next session or a new window load. Select Chart -> New from main-menu and the new session starts. This will apply the changes e.g. chart style (north/south/east), colour theme, ayanamsa, etc.</strong></li>
-          <li>For running on Linux, ensure that you have FUSE library or FUSE manager installed (libfuse2 or libfuse3 depending on Linux flavour/version).</li>
-          <li>Help topics will be expanded in every new version. The Astrology articles in Help section have been curated from author's website in automated fashion using browser extension. They are all opened offline in the application and do not need internet connection to read inside the application. The articles themselves contain the links  as they are present in the source website - this is automatically done by the browser extensions that curated the articles in pdf.</li></div></p>
-      <p>LagnaOne has many new features of birth details based customised predictions for dasha, transits and nakshatra years, progressions, active houses in various dashas, result-oriented transit points (phalit sphuta), numerology turning points, pinnacle years, etc. which <span style="color: red;">should be used strictly for analysis and study purpose only</span>.</p>      
-      <p>For announcements of new version release and features of LagnaOne, join it's Telegram channel:<br><a href="https://t.me/LagnaOne">https://t.me/LagnaOne</a></p>
-      <p>To report bugs, issues, new feature request or feedback/suggestions please submit a simple form in Issue-tracker:<br><a href="https://LagnaOneIssues.pythonanywhere.com">https://LagnaOneIssues.pythonanywhere.com</a></p>
-    </div>
-    
-    <div id="screenshots" class="tab-content">
-      <div class="description">
-        <h2 style="text-align: center;">LagnaOne Screenshots</h2>
-        <div class="slideshow-container">
-
-          <div class="mySlides fade">
-            <div class="numbertext">1 / 25</div>
-            <img src="Screenshot1.png" alt="LagnaOne Screenshot 1">
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">2 / 25</div>
-            <img src="Screenshot2.png" alt="LagnaOne Screenshot 2">
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">3 / 25</div>
-            <img src="Screenshot3.png" alt="LagnaOne Screenshot 3">
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">4 / 25</div>
-            <img src="Screenshot4.png" alt="LagnaOne Screenshot 4">
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">5 / 25</div>
-            <img src="Screenshot5.png" alt="LagnaOne Screenshot 5">
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">6 / 25</div>
-            <img src="Screenshot6.png" alt="LagnaOne Screenshot 6">
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">7 / 25</div>
-            <img src="Screenshot7.png" alt="LagnaOne Screenshot 7">
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">8 / 25</div>
-            <img src="Screenshot8.png" alt="LagnaOne Screenshot 8">
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">9 / 25</div>
-            <img src="Screenshot9.png" alt="LagnaOne Screenshot 9">
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">10 / 25</div>
-            <img src="Screenshot10.png" alt="LagnaOne Screenshot 10">
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">11 / 25</div>
-            <img src="Screenshot11.png" alt="LagnaOne Screenshot 11">
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">12 / 25</div>
-            <img src="Screenshot12.png" alt="LagnaOne Screenshot 12">
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">13 / 25</div>
-            <img src="Screenshot13.png" alt="LagnaOne Screenshot 13">
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">14 / 25</div>
-            <img src="Screenshot14.png" alt="LagnaOne Screenshot 14">
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">15 / 25</div>
-            <img src="Screenshot15.png" alt="LagnaOne Screenshot 15">
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">16 / 25</div>
-            <img src="Screenshot16.png" alt="LagnaOne Screenshot 16">
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">17 / 25</div>
-            <img src="Screenshot17.png" alt="LagnaOne Screenshot 17">
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">18 / 25</div>
-            <img src="Screenshot18.png" alt="LagnaOne Screenshot 18">
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">19 / 25</div>
-            <img src="Screenshot19.png" alt="LagnaOne Screenshot 19">
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">20 / 25</div>
-            <img src="Screenshot20.png" alt="LagnaOne Screenshot 20">
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">21 / 25</div>
-            <img src="Screenshot21.png" alt="LagnaOne Screenshot 21">
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">22 / 25</div>
-            <img src="Screenshot22.png" alt="LagnaOne Screenshot 22">
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">23 / 25</div>
-            <img src="Screenshot23.png" alt="LagnaOne Screenshot 23">
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">24 / 25</div>
-            <img src="Screenshot24.png" alt="LagnaOne Screenshot 24">
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">25 / 25</div>
-            <img src="Screenshot25.png" alt="LagnaOne Screenshot 25">
-          </div>
-
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-
-        <div class="dot-container">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
-          <span class="dot" onclick="currentSlide(5)"></span>
-          <span class="dot" onclick="currentSlide(6)"></span>
-          <span class="dot" onclick="currentSlide(7)"></span>
-          <span class="dot" onclick="currentSlide(8)"></span>
-          <span class="dot" onclick="currentSlide(9)"></span>
-          <span class="dot" onclick="currentSlide(10)"></span>
-          <span class="dot" onclick="currentSlide(11)"></span>
-          <span class="dot" onclick="currentSlide(12)"></span>
-          <span class="dot" onclick="currentSlide(13)"></span>
-          <span class="dot" onclick="currentSlide(14)"></span>
-        </div>
+      <br>
+      
+      <span style="color: #835d80; text-align: center; display: block;"><strong>3 Accurate Predictive Features in LagnaOne</strong></span>
+      <div class="iframe-container">
+        <iframe width="560" height="315" style="border-radius: 15px;" src="https://www.youtube.com/embed/q20gg6xIhik" title="LagnaOne software prediction demo video" frameborder="0" allowfullscreen></iframe>
       </div>
-    </div>
-    
-    <div id="license" class="tab-content">
-      <div class="description">
-        <h2 style="text-align: center;">Software License</h2>
-        <p>You will automatically accept this license agreement when you download LagnaOne or receive it's application file from any other source/person <span style="color: green;"><strong>&#8681;</strong></span></p>
-        <textarea id="license-text" readonly>Loading license...</textarea>
+      
+      <hr style="width: 95%; border: none; border-top: 1px solid #e2e8f0; margin: 20px 0;">
+      <h3 style="background-color: #f0f4f8; color: #2a1c67; padding: 5px 7px; margin-top: 7px; margin-bottom: 9px; border-radius: 12px; width: 95%; box-sizing: border-box; font-family: sans-serif;">Key Features and Benefits</h3>
+      
+      <h4 style="color: #260240;">1. Complete Offline Functionality</h4>
+      <ul>
+        <li>LagnaOne operates entirely offline, ensuring you can perform astrological calculations, generate charts, and analyze planetary positions anytime, anywhere—whether you're in a remote village, traveling, or simply prefer a disconnected experience.</li>
+        <li>Ideal for uninterrupted focus during consultations, study sessions, or research, free from network dependencies or data privacy concerns.</li>
+      </ul>
+      <div style="background:#f5f7fa; padding:10px; border-left:4px solid #d0d7de; border-radius:4px;">
+        <a href="https://www.astrologyofbharat.org/2025/12/practical-vedic-nadi-astrology-course-online-challenges.html">Online Astrology Learning - Overcoming 12 Challenges to Predictions</a>
       </div>
-    </div>
-    
-    <div id="about" class="tab-content">
-      <div class="description">
-        <h2>About the Author</h2>
-        <p>Partho Banerjee is an Indian astrologer practicing Nadi jyotiṣa and Parashara integrated astrology system. He is a passionate software professional dedicated to making actionable jyotiṣa tools accessible to all.</p>
-        <p>This Astrology software is created, owned, managed and maintained by Partho Banerjee, that’s me. LagnaOne is designed to grow with and for the Jyotiṣa community.</p>
-        <div style="text-align: center;"><img src="LagnaOne-Author-Partho-Banerjee.jpg" width=300 alt="LagnaOne Astrologer Partho Banerjee" style="border-radius:50%;"></div>
-        <p><strong>My journey in IT: </strong>I have been a full time IT and software professional for 14 years and have done Master's in Computer Applications. I am certified corporate IT trainer by Indian Institute of Technology (IIT) Kanpur, India and IBM Corporation. I have worked with leading IT companies in banking and financial services domain at global cities including London, Singapore, Mumbai, Copenhagen, Hong Kong etc.</p>
-        <p><strong>Astrology: </strong>My journey in Jyotiṣa or Indian astrology, numerology and cosmic sciences began in the year 1999 and I started informal horoscope analysis in the year 2001. All through that decade, I was pursuing my full time job in the IT along-side my quest in astrology in parallel.</p>
-        <p>In my eventful journey of more than two decades in astrology, I have done consultations for people from different walks of life across various cultures and countries (thanks to the internet).</p>
-        <p>In my view, Astrology is all about understanding root cause analysis and karmic healing required to handle/help in major obstacles in life - child birth issues, delayed marriage or serious relationship/marriage issues, career counseling and opportunities/challenge analysis, legal disputes, debts and loans, or other long/short term planning and decisions in life.</p>
-        <p>If you wish to know more about my astrology journey or want to connect with the astrologer in me, here is my astrology page&#9758;<a href="https://www.AstrologyOfBharat.org"> AstrologyOfBharat.org</a></p>
-        <p>I welcome you to make full use of LagnaOne software that I have passionately crafted for every Jyotiṣa seeker like you. In future I will release newer versions with more feature and changes based on feedback from the community. This is a "forever free" and offline software.</p>
-        <p>Warm wishes<br><span style="font-family: 'Apple Chancery', 'URW Chancery L', 'Corsiva', cursive; font-size: 26px; font-weight: 500; color: #002f6c; font-style: italic;">Partho Banerjee</span></p>
-      </div>
+      
+      <h4 style="color: #260240;">2. Modern, Intuitive User Interface</h4>
+      <ul>
+        <li>The software features a sleek, user-friendly interface that blends modern aesthetics with the timeless essence of Jyotiṣa or Vedic astrology. Generational leap over legacy tools like Jagannatha Hora (JHora).</li>
+        <li>Easy navigation, customizable themes, and responsive layouts make it a joy to use on desktops, laptops, or low-spec devices, ensuring accessibility for all. Tabs and mobile devices will be covered independently in near future - as of now it's being released for computers/laptops.</li>
+      </ul>
+      
+      <h4 style="color: #260240;">3. Comprehensive Astrological Tools</h4>
+      <ul>
+        <li>Analyse and study charts with <strong>dates in 2000 years in the past and 500 years in future</strong> at no cost.</li>
+        <li>Generate precise and visually appealing <strong>natal charts</strong>, <strong>shodash-vargas or 16 divisional charts in popular terminology </strong> (up to D-60), <strong>dashas</strong> (Vimshottari, Ashtottari, Yogini etc.), ashtakavargas, planetary strength (shad-bala), <strong>details of nakshatras in chart</strong> with healing and mantras, varshaphala (solar return), tithi pravesh, customised chart analysis, custom <strong>transit favourability scorecard</strong>, detailed Hora (hours) view, <strong>rich collection of progression systems</strong> for prediction, authentic <strong>Tamil nadi jyotiṣa</strong> tools like nadi-amsa, chakras e.g. sarvatobhadra, sudarshan chakra along-with <strong>transit charts and predictions</strong> with algorithms based on authentic Jyotiṣa text. Some traditionally popular predictive features like Murti-nirnaya for transits but lost in Jyotiṣa classical text have also been included. </li>
+        <li>Explore detailed <strong>planetary positions</strong>, <strong>vargas</strong>, <strong>chakras</strong>, and <strong>upcoming transits</strong> calculations to deepen your astrological insights.</li>
+        <li>Seekers and students of Jyotiṣa have been given a <strong>dedicated Student's Corner</strong> with learning aids and tools for analysis/predictions. The focus here is mostly on practical application of theoretical concepts.</li>
+        <li>Built-in <strong>interpretation guides</strong> and reference tables assist beginners while offering advanced tools like <strong>customised lucky weekday/direction</strong> selection and <strong>planets in chakras, directional (RG Rao nadi) chart, numerological turning points in life</strong> for seasoned practitioners and seekers.</li>
+        <li>Focus of LagnaOne is not just to be another available option amongst Jyotiṣa softwares - there are many good ones available for free as well as paid. LagnaOne is about adding practical value at every step of the way. It goes beyond displaying the calculation, tables and charts. <strong>The vision of LagnaOne's author</strong> is to free Jyotiṣa from the usual bureaucracy by means of having conclusive practical action points as outcome of Jyotiṣa application. Using Jyotiṣa to enrich lives and better understand our karmic progression is the vision that drives it. It's far from being perfect but it's designed to grow with the community. </li>
+      </ul>
+      <div style="text-align: center;"><img style="width: 90%; height: auto; display: block; margin-left: auto; margin-right: auto; border-radius: 25px;" src="vedic_astro_LagnaOne_free_software.jpg" alt="LagnaOne Desktop Application for Vedic Nadi Astrology"></div>
+      
+      <h4 style="color: #260240;">4. Flexible for All Users</h4>
+      <ul>
+        <li><strong>Students</strong>: Learn Vedic astrology with "students corner" that help in honing application skills at earlier stages of learning Jyotiṣa, making complex artifacts and abstract concepts more comprehensible while reading charts.</li>
+        <li><strong>Enthusiasts</strong>: Experiment with charts, explore planetary influences, and save unlimited profiles categorised as friends, family or celebrities/famous personalities or any other types.</li>
+        <li><strong>Professionals</strong>: Streamline consultations with ready made predictive dashboards, graphs, printable reports, and tools tailored for daily practice, all the while maintaining client data securely offline.</li>
+      </ul>
+      
+      <h4 style="color: #260240;">5. Forever Free, No Strings Attached</h4>
+      <ul>
+        <li>This software is a labour of love, offered completely free with <strong>no ads</strong>, <strong>no in-app purchases</strong>, and <strong>no premium/freemium versions</strong>—now or ever.</li>
+        <li>Save on costly subscriptions or proprietary tools while enjoying professional-grade features, making Vedic astrology accessible to everyone, regardless of financial means.</li>
+      </ul>
+      
+      <h4 style="color: #260240;">6. Cross-Platform Compatibility</h4>
+      <ul>
+        <li>Available for <strong>Windows</strong>, <strong>macOS</strong> and <strong>Linux</strong>, ensuring you can use it on your preferred device. Mac usually has some permission issues with independently downloaded executable programs so saving charts and user profile is facing some challenges in Mac at this time to which workarounds are being looked into - this is work in progress. Other usual stuff are working in Mac though.</li>
+        <li>Lightweight and optimized, it runs smoothly even on older hardware, democratizing access to high-quality astrological tools.</li>
+      </ul>
+      
+      <h4 style="color: #260240;">7. Easy to Download and Install</h4>
+      <ul>
+        <li>Get started in minutes with a hassle-free download from the Download page and a simple installation process.</li>
+        <li>Regular updates (also offline-installable) announced via Telegram channel ensures that you always have the latest features and bug fixes without compromising the private offline experience.</li>
+      </ul>
+      
+      <h4 style="color: #260240;">8. Secure and Private</h4>
+      <ul>
+        <li>With all data stored locally on your device, your charts, client details, and personal notes remain completely private—no cloud servers, no tracking, no worries.</li>
+        <li>Perfect for professionals who prioritize confidentiality and users who value data sovereignty.</li>
+      </ul>
+      
+      <hr style="width: 95%; border: none; border-top: 1px solid #e2e8f0; margin: 20px 0;">
+      <h3 style="background-color: #f0f4f8; color: #2a1c67; padding: 5px 7px; margin-top: 7px; margin-bottom: 9px; border-radius: 12px; width: 95%; box-sizing: border-box; font-family: sans-serif;">Why LagnaOne Stands Out</h3>
+      <p>LagnaOne astrology software isn’t just an astrology tool—it’s a bridge between traditional wisdom and modern technology to maximise the value of that wisdom to enrich our lives today. Whether you’re casting your first chart or conducting advanced research, its blend of <strong>precision</strong>, <strong>accessibility</strong>, and <strong>modern design</strong> empowers you to explore the cosmos with confidence. By being forever free and fully offline, it removes barriers, making the profound wisdom of Jyotiṣa available to all.</p>
+      <p>Future version for which development is going-on in full swing will integrate Ayurveda fundamentals and more dasha systems - that's a promise. LagnaOne is designed to widen the tunnel-narrow view of modern (and popular) Jyotiṣa practice to something more profound and "cosmic", that Jyotiṣa was originally devised to be. However, this will be done whilst fully utilising the insights provided by technology.</p>
+      
+      <hr style="width: 95%; border: none; border-top: 1px solid #e2e8f0; margin: 20px 0;">
+      <h3>How to get</h3>
+      <p>Click on the Download tab (at the top of this page), then click on the button for your operating system - Windows, macOS or Linux that your desktop/laptop uses. You can embark on your astrological journey with ease and clarity. Whether you are a curious beginner, a seasoned astrologer or a Jyotiṣa seeker, this tool is designed to grow with you.</p>
+      <p><em>Let LagnaOne guide you, offline and free, forever.</em></p>
     </div>
   </div>
 
@@ -752,199 +156,12 @@
     © 2025 LagnaOne by <a href="https://AstrologyOfBharat.org" target="_blank">Partho Banerjee</a>. All rights reserved.
   </footer>
 
-  <!-- MODALS FOR DOWNLOAD INSTRUCTIONS -->
-  <div id="macModal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="hideInstructions('mac')">&times;</span>
-      <h2>Instructions for Mac Users</h2>
-      <div class="modal-download-section">
-        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.4.5_pub/LagnaOne-2.4.5-arm64.dmg" class="btn">CLICK HERE TO DOWNLOAD .dmg</a>
-      </div>
-      <div class="instructions-text">
-        <p><strong>Actions to take AFTER downloading (copy/paste and save):</strong></p>
-        <p><strong>Step 1.</strong> In the Downloads folder (where it is downloaded from LagnaOne's official website https://AstroLagnaOne.in.net), double click the downloaded LagnaOne filename with .dmg extension. It starts the install.</p>
-        <p><strong>Step 2.</strong> Drag/move the app file to the Applications folder.</p>
-        <p><strong>Step 3.</strong> Open Terminal (found in Applications > Utilities). Run the below command (copy/paste):</p>
-        <code>xattr -cr /Applications/LagnaOne.app</code>
-        <p><strong>Step 4:</strong> In the Terminal, run the below command (copy/paste):</p>
-        <code>chmod +x /Applications/LagnaOne.app/Contents/Resources/backend/LagnaOneBackend</code>
-        <p><em>Please confirm the LagnaOne.app filename in your Applications folder and correct the filename if required. It should be exactly as it shows in your Applications folder.</em></p>
-        <p><strong>Step 5.</strong> Close Terminal and launch the app again. It should run. You can copy it to the Dock if you wish.</p>
-        <p>If you don't perform steps 1 to 5, you will get error "LagnaOne is damaged and can't be opened. You should move it to trash" which is a common issue for any 3rd party executable binary app - mostly free or un-notarised applications in Mac.</p>
-        
-        <h3>Trouble-shooting for errors in Mac:</h3>
-        <p>If there's any further issues like "Unexpected end of JSON input" or "LagnaOneBackend cannot be opened":</p>
-        <p><strong>A)</strong> Go to System Settings → Privacy & Security, scroll down a bit then → General (or "Allow applications from" in later Mac updates) and click "Allow from Anywhere" when it shows security warning. Then run LagnaOne. <br><em>Note: In later Mac updates, select "Select anywhere" from the drop-down.</em></p>
-        <p><strong>B)</strong> After doing A, if it still gives the error, then Right-click on LagnaOne in Applications folder, select "Open," and confirm any security prompts. Then run LagnaOne.</p>
-        <p><strong>C)</strong> As a last resort, temporarily disable Gatekeeper. Please be warned that it reduces security access to your file system. To do that open the terminal by Applications > Utilities then execute the following command (copy/paste):</p>
-        <code>sudo spctl --master-disable</code>
-        <p>The above command temporary reduces security access to your file system so re-enable it later with following command (copy/paste):</p>
-        <code>sudo spctl --master-enable</code>
-      </div>
-    </div>
-  </div>
-
-  <div id="linuxModal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="hideInstructions('linux')">&times;</span>
-      <h2>Instructions for Linux Users</h2>
-       <div class="modal-download-section">
-        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.4.5_pub/LagnaOne-2.4.5.AppImage" class="btn">CLICK HERE TO DOWNLOAD .AppImage</a>
-      </div>
-      <div class="instructions-text">
-        <p>Please <strong>ensure that you have Fuse installed</strong>. You can either install some Fuse manager tool or do the following steps to handle Fuse. Linux system requirements for LagnaOne - The FUSE package (libfuse2 or libfuse3) must be installed, because AppImage needs it to mount itself when run.</p>
-        <h3>For most Debian based systems like Ubuntu, Mint, Zorin etc.:</h3>
-        <code>sudo apt update
-sudo apt install libfuse2
-chmod +x LagnaOne-2.4.5.AppImage</code>
-        <p>Then run LagnaOne on prompt as:</p>
-        <code>./LagnaOne-2.4.5.AppImage --no-sandbox</code>
-        <h3>For most Fedora based systems:</h3>
-        <code>sudo dnf install fuse fuse-devel</code>
-        <h3>For RedHat Linux:</h3>
-        <code>sudo dnf install libfuse</code>
-        <p>In older systems: <code>sudo yum update</code> then <code>sudo yum install fuse fuse-libs</code><br>
-        <!--If ./LagnaOne.AppImage says file not found then do ./LagnaOne-2.4.5.AppImage -->
-        <b>Useful Tip:</b> Create a shell script with following content and save it in same folder/directory as the downloaded .AppImage file. Name the shell script as run_lagnaone.sh
-        <code>#!/bin/bash
-
-APP="LagnaOne-2.4.5.AppImage"
-
-if ! ldconfig -p | grep -q fuse; then
-    echo ""
-    echo "FUSE library not detected."
-    echo ""
-    echo "Ubuntu/Debian:"
-    echo "sudo apt install libfuse2"
-    echo ""
-    echo "Ubuntu 24.04:"
-    echo "sudo apt install libfuse2t64"
-    echo ""
-    exit 1
-fi
-
-chmod +x "$APP"
-./"$APP" --no-sandbox</code>
-        After saving the above shell script as run_lagnaone.sh give it execute permission:
-        <code>chmod +x ./run_lagnaone.sh</code>
-        To run it, always do:
-        <code>./run_lagnaone.sh</code>
-        If you wish to launch LagnaOne from desktop, create the desktop script named LagnaOne.desktop with following content and save in your desktop. Change the '/path/to/where/is/run_lagnaone.sh' to your correct file location:
-        <code>[Entry]
-Type=Application
-Name=LagnaOne
-Comment=Launch LagnaOne Application
-Exec=/path/to/where/is/run_lagnaone.sh
-Terminal=false
-Categories=Utility;</code>
-After saving in desktop, right-click the file, select Properties, then enable Executable as program, close it. Again right-click on file, select "Allow launching" once. That's all! Double click starts LagnaOne. 
-        </p>
-      </div>
-    </div>
-  </div>
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVVMTWS7VS"></script>
   <script>
-    let slideIndex = 1;
-
-    function openTab(tabName) {
-      // Hide all tab content
-      document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.remove('active');
-      });
-      // Remove active class from all buttons
-      document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      // Show selected tab content and mark button as active
-      document.getElementById(tabName).classList.add('active');
-      document.querySelector(`button[onclick="openTab('${tabName}')"]`).classList.add('active');
-      
-      // If the screenshots tab is opened, show the first slide
-      if (tabName === 'screenshots') {
-          showSlides(slideIndex);
-      }
-    }
-    
-    // Initialize the first tab and fetch license
-    document.addEventListener("DOMContentLoaded", function() {
-        openTab('introduction');
-        
-        // Fetch and load the license text
-        fetch('License.txt')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok. Status: ' + response.statusText);
-                }
-                return response.text();
-            })
-            .then(text => {
-                document.getElementById('license-text').value = text;
-            })
-            .catch(error => {
-                console.error('Error fetching license file:', error);
-                document.getElementById('license-text').value = 'Could not load the license file. Please ensure a file named "License.txt" is present in the same directory as this HTML file.';
-            });
-    });
-
-    // Slideshow functions
-    // Next/previous controls
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    // Thumbnail image controls
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      if (slides.length === 0) return; // Do nothing if no slides
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active-dot", "");
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active-dot";
-    }
-
-    // NEW FUNCTIONS FOR INSTRUCTIONS MODAL
-    function showInstructions(os) {
-      const modal = document.getElementById(os + 'Modal');
-      if (modal) {
-        modal.style.display = 'block';
-      }
-    }
-
-    function hideInstructions(os) {
-      const modal = document.getElementById(os + 'Modal');
-      if (modal) {
-        modal.style.display = 'none';
-      }
-    }
-
-    // Close the modal if the user clicks anywhere outside of the modal content
-    window.onclick = function(event) {
-      if (event.target.classList.contains('modal')) {
-        event.target.style.display = "none";
-      }
-    }
-
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NVVMTWS7VS');
   </script>
 </body>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NVVMTWS7VS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NVVMTWS7VS');
-</script>
 </html>
