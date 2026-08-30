@@ -96,7 +96,7 @@
         <div class="platform-card">
           <img src="./images/windows.jpg" alt="Windows" class="platform-image">
           <h3 class="platform-title">Windows</h3>
-          <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.5.0/LagnaOne-2.5.0.exe" class="platform-btn">Download</a>
+          <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.5.1/LagnaOne-2.5.1.exe" class="platform-btn">Download</a>
         </div>
         <div class="platform-card">
           <img src="./images/macOS.jpg" alt="macOS" class="platform-image">
@@ -118,8 +118,7 @@
         <ul>
           <li>Due to restrictions imposed in Mac (macOS), please follow the Download instructions that you see when you click Download button. Restriction in macOS for 3rd party apps is well known behaviour which can be resolved by user environment changes - most often user permissions and other simple settings explained in download instructions in next step. Additionally, there are many well known Youtube videos on this topic.</li>
           <li>Pdf export link in Chart -> Export is not working currently. There is however a workaround available - first export to html (by clicking Export to HTML button), it saves an html file on your computer. Then open the html file in a browser window by double-click on the file name. It opens the output in browser window. Do File->Print from browser menu or press Ctrl+P, then select "Export to pdf" option. It saves it as pdf file. Direct export to pdf from LagnaOne will be fixed in future release.</li>                            
-          <li><strong>Any changes in user profile or preferences related to display or calculations are applied in next session or a new window load. Select Chart -> New from main-menu and the new session starts. This will apply the changes e.g. chart style (north/south/east), colour theme, ayanamsa, etc.</strong></li>
-          <li>For running on Linux, ensure that you have FUSE library or FUSE manager installed (libfuse2 or libfuse3 depending on Linux flavour/version).</li>
+          <li><strong>Any changes in user profile or preferences related to display or calculations are applied in next session or a new window load. Select Chart -> New from main-menu and the new session starts. This will apply the changes e.g. chart style (north/south/east), colour theme, ayanamsa, etc.</strong></li>          
           <li>Help topics will be expanded in every new version. The Astrology articles in Help section have been curated from author's website in automated fashion using browser extension. They are all opened offline in the application and do not need internet connection to read inside the application. The articles themselves contain the links as they are present in the source website - this is automatically done by the browser extensions that curated the articles in pdf.</li>
         </ul>
       </div>
@@ -134,7 +133,7 @@
       <span class="close-btn" onclick="hideInstructions('mac')">&times;</span>
       <h2>Instructions for Mac Users</h2>
       <div class="modal-download-section">
-        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.5.0/LagnaOne-2.5.0-arm64.dmg" class="btn">CLICK HERE TO DOWNLOAD .dmg</a>
+        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.5.1/LagnaOne-2.5.1-arm64.dmg" class="btn">CLICK HERE TO DOWNLOAD .dmg</a>
       </div>
       <div class="instructions-text">
         <p><strong>Actions to take AFTER downloading (copy/paste and save):</strong></p>
@@ -154,7 +153,7 @@
         <p><strong>B)</strong> After doing A, if it still gives the error, then Right-click on LagnaOne in Applications folder, select "Open," and confirm any security prompts. Then run LagnaOne.</p>
         <p><strong>C)</strong> As a last resort, temporarily disable Gatekeeper. Please be warned that it reduces security access to your file system. To do that open the terminal by Applications > Utilities then execute the following command (copy/paste):</p>
         <code>sudo spctl --master-disable</code>
-        <p>The above command temporary reduces security access to your file system so re-enable it later with following command (copy/paste):</p>
+        <p>The above command temporary reduces security access to your file system so re-enable it later with following command:</p>
         <code>sudo spctl --master-enable</code>
       </div>
     </div>
@@ -164,56 +163,103 @@
     <div class="modal-content">
       <span class="close-btn" onclick="hideInstructions('linux')">&times;</span>
       <h2>Instructions for Linux Users</h2>
-       <div class="modal-download-section">
-        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.5.0/LagnaOne-2.5.0.AppImage" class="btn">CLICK HERE TO DOWNLOAD .AppImage</a>
+      <div class="modal-download-section">
+        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.5.1/lagna-one_2.5.1_amd64.deb" class="btn">CLICK HERE TO DOWNLOAD .deb</a>
       </div>
       <div class="instructions-text">
-        <p>Please <strong>ensure that you have Fuse installed</strong>. You can either install some Fuse manager tool or do the following steps to handle Fuse. Linux system requirements for LagnaOne - The FUSE package (libfuse2 or libfuse3) must be installed, because AppImage needs it to mount itself when run.</p>
-        <h3>For most Debian based systems like Ubuntu, Mint, Zorin etc.:</h3>
-        <code>sudo apt update
-sudo apt install libfuse2
-chmod +x LagnaOne-2.5.0.AppImage</code>
-        <p>Then run LagnaOne on prompt as:</p>
-        <code>./LagnaOne-2.5.0.AppImage --no-sandbox</code>
-        <h3>For most Fedora based systems:</h3>
-        <code>sudo dnf install fuse fuse-devel</code>
-        <h3>For RedHat Linux:</h3>
-        <code>sudo dnf install libfuse</code>
-        <p>In older systems: <code>sudo yum update</code> then <code>sudo yum install fuse fuse-libs</code><br>
-        <b>Useful Tip:</b> Create a shell script with following content and save it in same folder/directory as the downloaded .AppImage file. Name the shell script as run_lagnaone.sh
-        <code>#!/bin/bash
 
-APP="LagnaOne-2.5.0.AppImage"
+        <p><strong>Important:</strong> The Linux download provided here is a <strong>.deb package for 64-bit Intel/AMD (amd64/x86-64) Linux systems</strong>. It is intended primarily for Debian-based distributions such as Ubuntu, Linux Mint, Debian and other distributions that support .deb packages and the <strong>apt</strong> package manager.</p>
 
-if ! ldconfig -p | grep -q fuse; then
-    echo ""
-    echo "FUSE library not detected."
-    echo ""
-    echo "Ubuntu/Debian:"
-    echo "sudo apt install libfuse2"
-    echo ""
-    echo "Ubuntu 24.04:"
-    echo "sudo apt install libfuse2t64"
-    echo ""
-    exit 1
-fi
+        <p><strong>Step 1: Download the LagnaOne .deb package.</strong></p>
+        <p>Click the <strong>CLICK HERE TO DOWNLOAD .deb</strong> button above and save the file to your computer. The downloaded filename should be:</p>
+        <code>lagna-one_2.5.1_amd64.deb</code>
 
-chmod +x "$APP"
-./"$APP" --no-sandbox</code>
-        After saving the above shell script as run_lagnaone.sh give it execute permission:
-        <code>chmod +x ./run_lagnaone.sh</code>
-        To run it, always do:
-        <code>./run_lagnaone.sh</code>
-        If you wish to launch LagnaOne from desktop, create the desktop script named LagnaOne.desktop with following content and save in your desktop. Change the '/path/to/where/is/run_lagnaone.sh' to your correct file location:
-        <code>[Entry]
-Type=Application
-Name=LagnaOne
-Comment=Launch LagnaOne Application
-Exec=/path/to/where/is/run_lagnaone.sh
-Terminal=false
-Categories=Utility;</code>
-After saving in desktop, right-click the file, select Properties, then enable Executable as program, close it. Again right-click on file, select "Allow launching" once. That's all! Double click starts LagnaOne. 
-        </p>
+        <p><strong>Step 2: Open Terminal and go to the Downloads folder.</strong></p>
+        <p>In most Linux installations, downloaded files are stored in the <strong>Downloads</strong> folder. Open Terminal and run:</p>
+        <code>cd ~/Downloads</code>
+
+        <p>If your browser saved the file somewhere else, navigate to that folder instead. You can also type <code>cd </code> followed by the folder location.</p>
+
+        <p><strong>Step 3: Install LagnaOne using apt (recommended).</strong></p>
+        <p>The recommended installation method is to use <strong>apt</strong>. Run:</p>
+        <code>sudo apt install ./lagna-one_2.5.1_amd64.deb</code>
+
+        <p>Linux will ask for your user password because installing software requires administrator privileges. When you type the password in Terminal, <strong>nothing may appear on the screen while you type</strong>. This is normal. Type the password and press Enter.</p>
+
+        <p>The <strong>apt</strong> method is recommended because it can automatically handle required package dependencies where they are available through your Linux distribution's package repositories.</p>
+
+        <p><strong>Step 4: Complete the installation.</strong></p>
+        <p>If Terminal asks you to confirm the installation, type <strong>Y</strong> and press Enter. Wait until the installation process finishes and the Terminal prompt returns.</p>
+
+        <p><strong>Step 5: Launch LagnaOne.</strong></p>
+        <p>After successful installation, you can normally launch <strong>LagnaOne from your Linux Applications menu / application launcher</strong>. Look for <strong>LagnaOne</strong> in the list of installed applications.</p>
+
+        <p>You normally do <strong>not</strong> need to open Terminal every time you want to use LagnaOne.</p>
+
+        <h3>If you have difficulty installing the .deb package:</h3>
+
+        <p><strong>A) If apt reports missing or broken dependencies:</strong></p>
+        <p>Run:</p>
+        <code>sudo apt --fix-broken install</code>
+
+        <p>After that completes, try installing the LagnaOne package again:</p>
+        <code>sudo apt install ./lagna-one_2.5.1_amd64.deb</code>
+
+        <p><strong>B) Alternative installation using dpkg:</strong></p>
+        <p>If you prefer, or if your Linux distribution does not handle the package through the above command, you can install the .deb using:</p>
+        <code>sudo dpkg -i lagna-one_2.5.1_amd64.deb</code>
+
+        <p>If <strong>dpkg</strong> reports dependency problems, run:</p>
+        <code>sudo apt --fix-broken install</code>
+
+        <p>Then, if required, run the installation command again:</p>
+        <code>sudo apt install ./lagna-one_2.5.1_amd64.deb</code>
+
+        <h3>If LagnaOne does not appear in the Applications menu:</h3>
+
+        <p>First make sure that the installation completed without errors. You can try logging out and logging in again, or restarting your Linux desktop session.</p>
+
+        <p>You can also check whether the package was installed by running:</p>
+        <code>dpkg -l | grep lagna-one</code>
+
+        <h3>If LagnaOne does not start:</h3>
+
+        <p>If clicking the LagnaOne icon does nothing, open Terminal and try launching the application from there. This can display an error message that may help identify the problem.</p>
+
+        <p>The exact launch command can vary depending on the package installation and Linux distribution. If LagnaOne is available as a desktop application but does not start from the Applications menu, please report the problem through the LagnaOne issue tracker and include the Linux distribution and version you are using, along with any error message displayed by Terminal.</p>
+
+        <p><strong>Please note:</strong> LagnaOne is distributed here as a standard <strong>.deb package</strong>. You do <strong>not</strong> need to install LagnaOne from Ubuntu Software, Snap Store, Flathub, or any other Linux software store.</p>
+
+        <p><strong>FUSE is also not required for the .deb installation.</strong> FUSE is generally associated with other Linux package formats such as AppImage and is not required simply to install LagnaOne using the .deb package provided here.</p>
+
+        <h3>About LagnaOne's files and data:</h3>
+
+        <p>LagnaOne creates and uses its own application data folder for its files and settings. Normal operation does not require you to manually create special folders or change permissions for unrelated files on your Linux system.</p>
+
+        <p>You should normally install and run LagnaOne using your regular Linux user account. The <strong>sudo</strong> command is required for installation because installing a system application requires administrator privileges; it is not normally required every time you launch LagnaOne.</p>
+
+        <h3>Uninstalling LagnaOne:</h3>
+
+        <p>If you ever want to remove LagnaOne from your Linux system, you can normally uninstall it using:</p>
+        <code>sudo apt remove lagna-one</code>
+
+        <p>If you also want to remove system package configuration files associated with the package, you may use:</p>
+        <code>sudo apt purge lagna-one</code>
+
+        <p><strong>Note:</strong> Removing the application package does not necessarily mean that personal application data or files created separately by the application are automatically removed. If you need to completely remove such data, check the LagnaOne application-data folder separately before deleting anything.</p>
+
+        <h3>Important compatibility note:</h3>
+
+        <p>The download provided above is specifically for <strong>amd64 (64-bit Intel/AMD)</strong> Linux systems. If you are using an ARM-based Linux computer, such as certain Raspberry Pi or ARM-based laptops, this particular package is not the appropriate package for your system.</p>
+
+        <p>If you are unsure which architecture your Linux computer uses, open Terminal and run:</p>
+        <code>uname -m</code>
+
+        <p>For a typical 64-bit Intel/AMD Linux computer, the result will be:</p>
+        <code>x86_64</code>
+
+        <p>If you encounter any installation or execution problem, please report the <strong>Linux distribution name, Linux version, computer architecture, and the exact error message</strong> through the LagnaOne issue tracker. This information will help diagnose the problem.</p>
+
       </div>
     </div>
   </div>
@@ -227,10 +273,12 @@ After saving in desktop, right-click the file, select Properties, then enable Ex
       const modal = document.getElementById(os + 'Modal');
       if (modal) modal.style.display = 'block';
     }
+
     function hideInstructions(os) {
       const modal = document.getElementById(os + 'Modal');
       if (modal) modal.style.display = 'none';
     }
+
     window.onclick = function(event) {
       if (event.target.classList.contains('modal')) {
         event.target.style.display = "none";
