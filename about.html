@@ -11,58 +11,242 @@
   <meta property="og:url" content="https://AstroLagnaOne.in.net/about.html" />
   <link rel="canonical" href="https://AstroLagnaOne.in.net/about.html" />
   <link rel="icon" type="image/png" href="favicon.png">
+
   <style>
-    body { margin: 0; font-family: "Segoe UI", Roboto, sans-serif; background: radial-gradient(circle, #e9e9f4, #FDF0E1, #f1f5fc); color: #333; }
-    header { background-color: #f0f0f0; color: #2c3e50; padding: 1rem 2rem; text-align: center; }
-    h1 { margin: 0.2em 0; font-size: 2rem; }
-    .header-container { display: flex; align-items: center; justify-content: center; gap: 15px; text-align: left; }
-    .logo { width: 85px; height: 55px; border-radius: 12px; object-fit: contain; background-color: white; padding: 0px; flex-shrink: 0; }
-    .title-text h1 { margin: 0; }
-    .title-text p { margin: 0; font-size: 1rem; }
-    .tabs { max-width: 800px; margin: 1rem auto; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-    .tab-btn { padding: 0.75rem 1.5rem; background-color: #835D80; color: white; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; transition: background 0.3s ease; text-decoration: none; text-align: center; }
-    .tab-btn:hover, .tab-btn.active { background-color: #6a0dad; }
-    .container { max-width: 800px; margin: 2rem auto; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-    .description { font-size: 1.1rem; line-height: 1.6; }
-    .description h2 { color: #835D80; margin-top: 1.5rem; }
-    .learning-resource { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid #e7e1e9; }
-    .learning-resource > h2 { font-size: 1.2rem; line-height: 1.4; margin: 0 0 1rem; color: #66516f; }
-    .course-card { padding: 1.1rem 1.2rem; background: #FFFEFB; border: 1px solid #e7e1ed; border-left: 3px solid #f9cb9c; border-radius: 7px; }
-    .course-card h3 { margin: 0 0 0.55rem; color: #493d53; font-size: 1.08rem; line-height: 1.45; font-weight: 600; }
-    .course-card p { margin: 0.55rem 0; font-size: 0.98rem; line-height: 1.55; }
-    .course-card .course-summary { color: #4b4650; }
-    .course-card .course-reach { color: #51445a; }
-    .course-card .course-link { margin-top: 0.85rem; }
-    .course-card .course-link a { display: inline-block; color: #514064; font-weight: 600; text-decoration: none; border-bottom: 1px solid #b9a9c4; padding-bottom: 2px; }
-    .course-card .course-link a:hover { color: #6a0dad; border-bottom-color: #6a0dad; }
-    @media (max-width: 600px) {
-      .learning-resource > h2 { font-size: 1.12rem; }
-      .course-card { padding: 0.95rem 1rem; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle, #e9e9f4, #FDF0E1, #f1f5fc);
+      color: #333;
     }
-    footer { text-align: center; font-size: 0.9rem; padding: 1rem; color: #777; }
+
+    header {
+      background-color: #f0f0f0;
+      color: #2c3e50;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0.2em 0;
+      font-size: 2rem;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      text-align: left;
+    }
+
+    .logo {
+      width: 85px;
+      height: 55px;
+      border-radius: 12px;
+      object-fit: contain;
+      background-color: white;
+      padding: 0px;
+      flex-shrink: 0;
+    }
+
+    .title-text h1 {
+      margin: 0;
+    }
+
+    .title-text p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .tabs {
+      max-width: 800px;
+      margin: 1rem auto;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      padding: 0.75rem 1.5rem;
+      background-color: #835D80;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .tab-btn:hover,
+    .tab-btn.active {
+      background-color: #6a0dad;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .description h2 {
+      color: #835D80;
+      margin-top: 1.5rem;
+    }
+
+    .learning-resource {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid #e7e1e9;
+    }
+
+    .learning-resource > h2 {
+      font-size: 1.2rem;
+      line-height: 1.4;
+      margin: 0 0 1rem;
+      color: #66516f;
+    }
+
+    .course-card {
+      padding: 1.1rem 1.2rem;
+      background: #FFFEFB;
+      border: 1px solid #e7e1ed;
+      border-left: 3px solid #f9cb9c;
+      border-radius: 7px;
+      margin-bottom: 1rem;
+    }
+
+    .course-card h3 {
+      margin: 0 0 0.55rem;
+      color: #493d53;
+      font-size: 1.08rem;
+      line-height: 1.45;
+      font-weight: 600;
+    }
+
+    .course-card p {
+      margin: 0.55rem 0;
+      font-size: 0.98rem;
+      line-height: 1.55;
+    }
+
+    .course-card .course-summary {
+      color: #4b4650;
+    }
+
+    .course-card .course-reach {
+      color: #51445a;
+    }
+
+    .course-card .course-link {
+      margin-top: 0.85rem;
+    }
+
+    .course-card .course-link a {
+      display: inline-block;
+      color: #514064;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid #b9a9c4;
+      padding-bottom: 2px;
+    }
+
+    .course-card .course-link a:hover {
+      color: #6a0dad;
+      border-bottom-color: #6a0dad;
+    }
+
+    /* Book resource styling */
+    .book-card {
+      border-left-color: #9bb9c8;
+      background: #FBFDFF;
+    }
+
+    .book-card h3 {
+      color: #354e61;
+    }
+
+    .book-card .book-tagline {
+      color: #526b80;
+      font-size: 1rem;
+      font-style: italic;
+      margin-top: -0.25rem;
+    }
+
+    .book-card .book-summary {
+      color: #4b4650;
+    }
+
+    .book-card .course-link a {
+      color: #365b73;
+      border-bottom-color: #a8c0cf;
+    }
+
+    .book-card .course-link a:hover {
+      color: #1d6b91;
+      border-bottom-color: #1d6b91;
+    }
+
+    @media (max-width: 600px) {
+      .learning-resource > h2 {
+        font-size: 1.12rem;
+      }
+
+      .course-card {
+        padding: 0.95rem 1rem;
+      }
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 1rem;
+      color: #777;
+    }
   </style>
 </head>
+
 <body>
+
   <header>
     <div class="header-container">
-      <img src="logo_lagna_one_smaller.jpg" alt="LagnaOne Logo" class="logo">
+
+      <img src="logo_lagna_one_smaller.jpg"
+           alt="LagnaOne Logo"
+           class="logo">
+
       <div class="title-text">
         <h1>LagnaOne</h1>
-        <p>    
+
+        <p>
           Jyotiṣa (Vedic Astrology) App for
           <span style="color:#0369a1; font-weight:600;">Windows</span>,
           <span style="color:#b45309; font-weight:600;">macOS</span>
           &amp;
           <span style="color:#4b5563; font-weight:600;">Linux</span>
+
           <span style="display:inline-flex; align-items:center; gap:8px; margin-left:10px;
             background:linear-gradient(135deg,#e0f2fe,#bae6fd); color:#0369a1;
             font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
             font-size:15px; font-weight:700; padding:4px 14px; border-radius:9999px;
             border:1px solid #7dd3fc; box-shadow:0 4px 6px -1px rgba(0,0,0,0.05);
-            white-space:nowrap; vertical-align:middle;"> ✓ FREE DOWNLOAD
+            white-space:nowrap; vertical-align:middle;">
+            ✓ FREE DOWNLOAD
           </span>
         </p>
       </div>
+
     </div>
   </header>
 
@@ -75,44 +259,137 @@
   </div>
 
   <div class="container">
+
     <div class="description">
+
       <h2>About the Author</h2>
+
       <p>Mr. Partho Banerjee is a Jyotiṣa teacher, researcher and author with a long-standing professional background in software and technology.</p>
+
       <p>His engagement with Jyotiṣa developed alongside his professional career rather than as a replacement for it, eventually becoming a sustained field of research, guidance and teaching.</p>
-      <div style="text-align: center;"><img src="Vedic_astrologer_partho_banerjee.jpg" width="300" alt="LagnaOne creator Vedic Astrologer Partho Banerjee" style="border-radius:50%;"></div>
+
+      <div style="text-align: center;">
+        <img src="Vedic_astrologer_partho_banerjee.jpg"
+             width="300"
+             alt="LagnaOne creator Vedic Astrologer Partho Banerjee"
+             style="border-radius:50%;">
+      </div>
+
       <p>He is an Indian astrologer practicing Nadi jyotiṣa and Parashara integrated astrology system. His passion in jyotiṣa is dedicated making actionable jyotiṣa software tools accessible to all.</p>
+
       <p>This Astrology software is created, owned, managed and maintained by Partho Banerjee, that’s me. LagnaOne is designed to grow with and for the Jyotiṣa community.</p>
+
       <p><strong>Astrology: </strong>My journey in Jyotiṣa or Indian astrology, numerology and cosmic sciences began in the year 1999 and I started informal horoscope analysis in the year 2001. All through that decade, I was pursuing my full time job in the IT along-side my quest in astrology in parallel.</p>
+
       <p><strong>My journey in IT: </strong>I have been a full time IT and software professional for 14 years and have done Master's in Computer Applications. I am certified corporate IT trainer by Indian Institute of Technology (IIT) Kanpur, India and IBM Corporation. I have worked with leading IT companies in banking and financial services domain at global cities including London, Singapore, Mumbai, Copenhagen, Hong Kong etc.</p>
+
       <p>In my eventful journey of 24 years in astrology, I have done consultations for people from different walks of life across various cultures and countries (thanks to the internet).</p>
+
       <p>In my view, Astrology is all about understanding root cause analysis and karmic healing required to handle/help in major obstacles in life - child birth issues, delayed marriage or serious relationship/marriage issues, career counseling and opportunities/challenge analysis, legal disputes, debts and loans, or other long/short term planning and decisions in life.</p>
+
       <p>If you wish to know more about my astrology journey or want to connect with the astrologer in me, here is my astrology page&#9758;<a href="https://www.AstrologyOfBharat.org"> AstrologyOfBharat.org</a></p>
+
       <p>I welcome you to make full use of LagnaOne software that I have passionately crafted for every Jyotiṣa seeker like you. In future I will release newer versions with more feature and changes based on feedback from the community. This is a "forever free" and offline software.</p>
-      <p>Warm wishes<br><span style="font-family: 'Apple Chancery', 'URW Chancery L', 'Corsiva', cursive; font-size: 26px; font-weight: 500; color: #002f6c; font-style: italic;">Partho Banerjee</span></p>
+
+      <p>
+        Warm wishes<br>
+        <span style="font-family: 'Apple Chancery', 'URW Chancery L', 'Corsiva', cursive; font-size: 26px; font-weight: 500; color: #002f6c; font-style: italic;">Partho Banerjee</span>
+      </p>
+
+
+      <!-- OTHER WORKS AND LEARNING RESOURCES -->
 
       <section class="learning-resource" aria-labelledby="other-works-heading">
+
         <h2 id="other-works-heading">Other Works &amp; Learning Resources By Author</h2>
+
+        <!-- RESOURCE 1: ASTROLOGY COURSE -->
+
         <div class="course-card">
+
           <h3>Integrated Nadi &amp; Vedic Jyotiṣa Course</h3>
-          <p class="course-summary">Three progressive, guided levels—from foundational chart reading to professional practice and advanced predictive methods.</p>
-          <p class="course-reach"><strong>Students in 38 countries</strong> have been trained so far.</p>
-          <p>Personally taught by Śrī Partho Banerjee—astrologer, researcher, teacher, mentor, author and software professional with a long-standing engagement with Jyotiṣa.</p>
-          <p class="course-link"><a href="https://www.astrologyofbharat.org/p/online-course-on-integrated-astrology.html" target="_blank" rel="noopener noreferrer">Explore the course details <span aria-hidden="true">↗</span></a></p>
+
+          <p class="course-summary">
+            Three progressive, guided levels—from foundational chart reading
+            to professional practice and advanced predictive methods.
+          </p>
+
+          <p class="course-reach">
+            <strong>Students in 38 countries</strong> have been trained so far.
+          </p>
+
+          <p>
+            Personally taught by Śrī Partho Banerjee—astrologer, researcher,
+            teacher, mentor, author and software professional with a
+            long-standing engagement with Jyotiṣa.
+          </p>
+
+          <p class="course-link">
+            <a href="https://www.astrologyofbharat.org/p/online-course-on-integrated-astrology.html"
+               target="_blank"
+               rel="noopener noreferrer">
+              Explore the course details
+              <span aria-hidden="true">↗</span>
+            </a>
+          </p>
+
         </div>
+        <!-- RESOURCE 2: BOOK BY THE AUTHOR -->
+
+        <div class="course-card book-card">
+
+          <h3>The Unspoken Jyotish</h3>
+
+          <p class="book-tagline">
+            Deeper Dimensions of Traditional Chart Reading
+          </p>
+
+          <p class="book-summary">
+            A book authored by Partho Banerjee, this book explores the subtler
+            dimensions of traditional Jyotiṣa beyond isolated yogas,
+            keywords and formula-based interpretation. It examines how
+            different principles connect, why popular narratives fail, and how
+            careful observation and independent reasoning can lead to
+            a deeper understanding of an actual horoscope.
+          </p>
+
+          <p class="course-link">
+            <a href="https://www.astrologyofbharat.org/2026/10/the-unspoken-jyotish-by-partho-banerjee.html"
+               target="_blank"
+               rel="noopener noreferrer">
+              More about the book
+              <span aria-hidden="true">↗</span>
+            </a>
+          </p>
+
+        </div>
+
       </section>
+
     </div>
   </div>
 
+
   <footer>
-    © 2025 LagnaOne by <a href="https://AstrologyOfBharat.org" target="_blank">Partho Banerjee</a>. All rights reserved.
+    © 2025 LagnaOne by
+    <a href="https://AstrologyOfBharat.org" target="_blank">
+      Partho Banerjee
+    </a>. All rights reserved.
   </footer>
 
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVVMTWS7VS"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'G-NVVMTWS7VS');
   </script>
+
 </body>
 </html>
