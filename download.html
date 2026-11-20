@@ -96,7 +96,7 @@
         <div class="platform-card">
           <img src="./images/windows.jpg" alt="Windows" class="platform-image">
           <h3 class="platform-title">Windows</h3>
-          <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.5.3/LagnaOne-2.5.3.exe" class="platform-btn">Download</a>
+          <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.5.3/LagnaOne-2.5.3.zip" class="platform-btn">Download</a>
         </div>
         <div class="platform-card">
           <img src="./images/macOS.jpg" alt="macOS" class="platform-image">
@@ -133,11 +133,11 @@
       <span class="close-btn" onclick="hideInstructions('mac')">&times;</span>
       <h2>Instructions for Mac Users</h2>
       <div class="modal-download-section">
-        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.5.3/LagnaOne-2.5.3-arm64.dmg" class="btn">CLICK HERE TO DOWNLOAD .dmg</a>
+        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.5.3/LagnaOne-2.5.3-arm64.zip" class="btn">CLICK HERE TO DOWNLOAD</a>
       </div>
       <div class="instructions-text">
         <p><strong>Actions to take AFTER downloading (copy/paste and save):</strong></p>
-        <p><strong>Step 1.</strong> In the Downloads folder (where it is downloaded from LagnaOne's official website https://AstroLagnaOne.in.net), double click the downloaded LagnaOne filename with .dmg extension. It starts the install.</p>
+        <p><strong>Step 1.</strong> In the Downloads folder (where it is downloaded from LagnaOne's official website https://AstroLagnaOne.in.net), unzip it and double click the downloaded LagnaOne filename. It starts the install.</p>
         <p><strong>Step 2.</strong> Drag/move the app file to the Applications folder.</p>
         <p><strong>Step 3.</strong> Open Terminal (found in Applications > Utilities). Run the below command (copy/paste):</p>
         <code>xattr -cr /Applications/LagnaOne.app</code>
@@ -145,7 +145,7 @@
         <code>chmod +x /Applications/LagnaOne.app/Contents/Resources/backend/LagnaOneBackend</code>
         <p><em>Please confirm the LagnaOne.app filename in your Applications folder and correct the filename if required. It should be exactly as it shows in your Applications folder.</em></p>
         <p><strong>Step 5.</strong> Close Terminal and launch the app again. It should run. You can copy it to the Dock if you wish.</p>
-        <p>If you don't perform steps 1 to 5, you will get error "LagnaOne is damaged and can't be opened. You should move it to trash" which is a common issue for any 3rd party executable binary app - mostly free or un-notarised applications in Mac.</p>
+        <p>If you don't perform steps 1 to 5, you will get error "LagnaOne is damaged and can't be opened. You should move it to trash" which is a common issue for any 3rd party executable binary app - mostly free applications in Mac.</p>
         
         <h3>Trouble-shooting for errors in Mac:</h3>
         <p>If there's any further issues like "Unexpected end of JSON input" or "LagnaOneBackend cannot be opened":</p>
@@ -164,7 +164,7 @@
       <span class="close-btn" onclick="hideInstructions('linux')">&times;</span>
       <h2>Instructions for Linux Users</h2>
       <div class="modal-download-section">
-        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.5.2/lagna-one_2.5.2_amd64.deb" class="btn">CLICK HERE TO DOWNLOAD .deb</a>
+        <a href="https://github.com/bhagwate/Lagna-One/releases/download/LagnaOne-Release-V2.5.3/lagna-one_2.5.3_amd64.deb" class="btn">CLICK HERE TO DOWNLOAD .deb</a>
       </div>
       <div class="instructions-text">
 
@@ -172,7 +172,7 @@
 
         <p><strong>Step 1: Download the LagnaOne .deb package.</strong></p>
         <p>Click the <strong>CLICK HERE TO DOWNLOAD .deb</strong> button above and save the file to your computer. The downloaded filename should be:</p>
-        <code>lagna-one_2.5.2_amd64.deb</code>
+        <code>lagna-one_2.5.3_amd64.deb</code>
 
         <p><strong>Step 2: Open Terminal and go to the Downloads folder.</strong></p>
         <p>In most Linux installations, downloaded files are stored in the <strong>Downloads</strong> folder. Open Terminal and run:</p>
@@ -182,7 +182,7 @@
 
         <p><strong>Step 3: Install LagnaOne using apt (recommended).</strong></p>
         <p>The recommended installation method is to use <strong>apt</strong>. Run:</p>
-        <code>sudo apt install ./lagna-one_2.5.2_amd64.deb</code>
+        <code>sudo apt install ./lagna-one_2.5.3_amd64.deb</code>
 
         <p>Linux will ask for your user password because installing software requires administrator privileges. When you type the password in Terminal, <strong>nothing may appear on the screen while you type</strong>. This is normal. Type the password and press Enter.</p>
 
@@ -207,13 +207,13 @@
 
         <p><strong>B) Alternative installation using dpkg:</strong></p>
         <p>If you prefer, or if your Linux distribution does not handle the package through the above command, you can install the .deb using:</p>
-        <code>sudo dpkg -i lagna-one_2.5.2_amd64.deb</code>
+        <code>sudo dpkg -i lagna-one_2.5.3_amd64.deb</code>
 
         <p>If <strong>dpkg</strong> reports dependency problems, run:</p>
         <code>sudo apt --fix-broken install</code>
 
         <p>Then, if required, run the installation command again:</p>
-        <code>sudo apt install ./lagna-one_2.5.2_amd64.deb</code>
+        <code>sudo apt install ./lagna-one_2.5.3_amd64.deb</code>
 
         <h3>If LagnaOne does not appear in the Applications menu:</h3>
 
